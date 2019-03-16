@@ -1,0 +1,23 @@
+{
+    "name": "cmspaca/rt-simpleosm",
+    "type": "typo3-cms-extension",
+    "description": "Insert a simple OpenStreetMap. No API key required!",
+    "authors": [
+        {
+            "name": "Regis TEDONE",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^7.6 || ^8.7 || ^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "CMSPACA\\RtSimpleosm\\": "Classes"
+        }
+    },
+    "replace": {
+        "rt_simpleosm": "self.version",
+        "typo3-ter/rt-simpleosm": "self.version"
+    }
+}

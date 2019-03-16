@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-03-04T12:34:40Z" product-name="rt_simpleosm">
+        <header/>
+        <body>
+            <trans-unit id="simpleosm.extmng.backendPluginInterfaceBackgroundImage">
+                <source>Background image : The backend plugin interface background image.</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.extmng.backendPluginInterfaceBackgroundColor">
+                <source>Background color : The backend plugin interface background color.</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.extmng.backendPluginInterfaceBackground">
+                <source>Use color : Use color instead of image as backend plugin interface background.</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.noHeaderFound">
+                <source>No header found</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.0">
+                <source>(Title default level)</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.1">
+                <source>(Title level 1)</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.2">
+                <source>(Title level 2)</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.3">
+                <source>(Title level 3)</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.4">
+                <source>(Title level 4)</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.5">
+                <source>(Title level 5)</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.100">
+                <source>(Hidden title)</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.message.selectAMapRecord">
+                <source>Please select a map record.</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.message.getLatLong.title">
+                <source>Visit this url to find coordinates from an address:</source>
+            </trans-unit>
+            <trans-unit id="simpleosm.message.getLatLong.text">
+                <source>Get Latitude and Longitude from an address: https://www.latlong.net.</source>
+            </trans-unit>
+            <trans-unit id="about.CMSPACA.title">
+                <source>About CMS-PACA</source>
+            </trans-unit>
+            <trans-unit id="about.CMSPACA.text">
+                <source>Development of functional and custom TYPO3 extensions since 2004.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

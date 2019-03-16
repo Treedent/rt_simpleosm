@@ -1,0 +1,37 @@
+{namespace core = TYPO3\CMS\Core\ViewHelpers}
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-core="true" data-namespace-typo3-fluid="true">
+    <div class="panel-body" style="{flex.background_style}">
+        <h3><core:icon identifier="{flex.plugin_icon}" size="default"/>&nbsp;{flex.plugin_title}</h3>
+        <h4><em>{flex.plugin_function}</em></h4>
+        <ul class="list-group" style="opacity: 0.85;">
+            <f:if condition="{flex.contents}">
+                <f:then>
+                    <li class="list-group-item">
+                        <img src="{flex.contents.osm.icon}" alt="osm">&nbsp;
+                        <strong>{flex.contents.osm.title}</strong>&nbsp;
+                        [{flex.contents.osm.uid}]<br />
+                        <f:format.raw>{flex.contents.osm.address}</f:format.raw>
+                        <f:format.raw>{flex.contents.osm.latitude}</f:format.raw>
+                        <f:format.raw>{flex.contents.osm.longitude}</f:format.raw>
+                    </li>
+                    <li class="list-group-item">
+                        <f:image width="75" height="75" src="{flex.contents.mapStyleImg}" alt="map_style" /><br />
+                        <f:format.raw>{flex.contents.mapStyleLabel}</f:format.raw>
+                    </li>
+                    <li class="list-group-item">
+                        <f:format.raw>{flex.contents.mapWidth}</f:format.raw>
+                        <f:format.raw>{flex.contents.mapHeight}</f:format.raw>
+                        <f:format.raw>{flex.contents.borderRadiusMap}</f:format.raw>
+                    </li>
+                    <li class="list-group-item">
+                        <f:format.raw>{flex.contents.zoom}</f:format.raw>
+                        <f:format.raw>{flex.contents.popupOptions}</f:format.raw>
+                        <f:format.raw>{flex.contents.scrollWheelZoom}</f:format.raw>
+                        <f:format.raw>{flex.contents.displayZoomButtons}</f:format.raw>
+                        <f:format.raw>{flex.contents.displayFullScreenButton}</f:format.raw>
+                    </li>
+                </f:then>
+            </f:if>
+        </ul>
+    </div>
+</html>

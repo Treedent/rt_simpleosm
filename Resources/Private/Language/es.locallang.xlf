@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="es" datatype="plaintext" original="messages" date="2019-03-01T19:31:10Z" product-name="rt_simpleosm">
+		<header/>
+		<body>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm">
+				<source>Osm</source>
+				<target>Osm</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.title">
+				<source>Map title</source>
+				<target>Título de mapa</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.address">
+				<source>Map address</source>
+				<target>Dirección de mapa</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.latitude">
+				<source>Map latitude</source>
+				<target>Latitud de mapa</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.longitude">
+				<source>Map longitude</source>
+				<target>Longitud de mapa</target>
+			</trans-unit>
+			<trans-unit id="map.label.zoomIn">
+				<source>Zoom in</source>
+				<target>Acercar</target>
+			</trans-unit>
+			<trans-unit id="map.label.zoomOut">
+				<source>Zoom out</source>
+				<target>Alejarse</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

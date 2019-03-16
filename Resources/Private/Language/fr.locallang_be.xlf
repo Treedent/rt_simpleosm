@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="fr" datatype="plaintext" original="messages" date="2019-03-04T12:34:40Z" product-name="rt_simpleosm">
+        <header/>
+        <body>
+            <trans-unit id="simpleosm.extmng.backendPluginInterfaceBackgroundImage">
+                <source>Background image : The backend plugin interface background image.</source>
+                <target>Image de fond : L'image de fond de l'interface du plugin backend.</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.extmng.backendPluginInterfaceBackgroundColor">
+                <source>Background color : The backend plugin interface background color.</source>
+                <target>Couleur de fond : La couleur de fond de l'interface du plugin backend.</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.extmng.backendPluginInterfaceBackground">
+                <source>Use color : Use color instead of image as backend plugin interface background.</source>
+                <target>Utiliser la couleur : Utiliser la couleur plutôt que l'image de fond de l'interface du plugin backend.</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.noHeaderFound">
+                <source>No header found</source>
+                <target>Aucun titre trouvé</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.0">
+                <source>(Title default level)</source>
+                <target>(Titre niveau par défaut)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.1">
+                <source>(Title level 1)</source>
+                <target>(Titre niveau 1)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.2">
+                <source>(Title level 2)</source>
+                <target>(Titre niveau 2)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.3">
+                <source>(Title level 3)</source>
+                <target>(Titre niveau 3)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.4">
+                <source>(Title level 4)</source>
+                <target>(Titre niveau 4)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.5">
+                <source>(Title level 5)</source>
+                <target>(Titre niveau 5)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.100">
+                <source>(Hidden title)</source>
+                <target>(Titre caché)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.message.selectAMapRecord">
+                <source>Please select a map record.</source>
+                <target>Veuillez sélectionner une enregistrement de carte.</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.message.getLatLong.title">
+                <source>Visit this url to find coordinates from an address:</source>
+                <target>Visitez cette url pour trouver les coodonnées d'une adresse :</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.message.getLatLong.text">
+                <source>Get Latitude and Longitude from an address: https://www.latlong.net.</source>
+                <target>Obtenir la latitude et la longitude depuis une adresse : https://www.latlong.net.</target>
+            </trans-unit>
+            <trans-unit id="about.CMSPACA.title">
+                <source>About CMS-PACA</source>
+                <target>A propos de CMS-PACA</target>
+            </trans-unit>
+            <trans-unit id="about.CMSPACA.text">
+                <source>Development of functional and custom TYPO3 extensions since 2004.</source>
+                <target>Développement d'extensions TYPO3 fonctionnelles et sur mesure depuis 2004.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

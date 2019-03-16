@@ -1,0 +1,242 @@
+<T3DataStructure>
+	<sheets>
+		<mapselection>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.sheet.mapSelection</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					
+					<settings.MapRecord>
+                        <exclude>0</exclude>
+                        <label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapRecord</label>
+                        <config>
+                            <type>group</type>
+                            <internal_type>db</internal_type>
+                            <allowed>tx_rtsimpleosm_domain_model_osm</allowed>
+                            <size>1</size>
+							<minitems>1</minitems>
+							<maxitems>1</maxitems>
+							<eval>required</eval>
+                        </config>
+					</settings.MapRecord>
+
+				</el>
+			</ROOT>
+		</mapselection>
+
+		<styling>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.sheet.styling</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<settings.MapStyle>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.0</numIndex>
+									<numIndex index="1">0</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_0.png</numIndex>
+								</numIndex>
+								<numIndex index="1">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.1</numIndex>
+									<numIndex index="1">1</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_1.png</numIndex>
+								</numIndex>
+								<numIndex index="2">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.2</numIndex>
+									<numIndex index="1">2</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_2.png</numIndex>
+								</numIndex>
+								<numIndex index="3">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.3</numIndex>
+									<numIndex index="1">3</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_3.png</numIndex>
+								</numIndex>
+								<numIndex index="4">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.4</numIndex>
+									<numIndex index="1">4</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_4.png</numIndex>
+								</numIndex>
+								<numIndex index="5">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.5</numIndex>
+									<numIndex index="1">5</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_5.png</numIndex>
+								</numIndex>
+								<numIndex index="6">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.6</numIndex>
+									<numIndex index="1">6</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_6.png</numIndex>
+								</numIndex>
+								<numIndex index="7">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.7</numIndex>
+									<numIndex index="1">7</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_7.png</numIndex>
+								</numIndex>
+								<numIndex index="8">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.8</numIndex>
+									<numIndex index="1">8</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_8.png</numIndex>
+								</numIndex>
+								<numIndex index="9">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.9</numIndex>
+									<numIndex index="1">9</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_9.png</numIndex>
+								</numIndex>
+								<numIndex index="10">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.10</numIndex>
+									<numIndex index="1">10</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_10.png</numIndex>
+								</numIndex>
+							</items>
+							<showIconTable>1</showIconTable>
+							<fieldWizard>
+								<selectIcons>
+									<disabled>0</disabled>
+								</selectIcons>
+							</fieldWizard>
+							<default>0</default>
+						</config>
+					</settings.MapStyle>
+
+					<settings.MapWidth>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapWidth</label>d>
+						<config>
+							<type>input</type>
+							<size>10</size>
+							<default>100%</default>
+							<eval>required</eval>
+						</config>
+					</settings.MapWidth>
+
+					<settings.MapHeight>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapHeight</label>
+						<config>
+							<type>input</type>
+							<size>10</size>
+							<default>400px</default>
+							<eval>required</eval>
+						</config>
+					</settings.MapHeight>
+
+					<settings.BorderRadiusMap>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.borderRadiusMap</label>
+						<config>
+							<type>input</type>
+							<size>10</size>
+							<eval>num</eval>
+							<default>2px</default>
+							<eval>required</eval>
+						</config>
+					</settings.BorderRadiusMap>
+					
+				</el>
+			</ROOT>
+		</styling>
+
+		<options>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.sheet.options</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<settings.Zoom>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.zoom</label>
+						<config>
+							<type>input</type>
+							<size>10</size>
+							<eval>num</eval>
+							<default>16</default>
+							<eval>required</eval>
+						</config>
+					</settings.Zoom>
+
+					<settings.PopupOptions>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions.0</numIndex>
+									<numIndex index="1">0</numIndex>
+								</numIndex>
+								<numIndex index="1">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions.1</numIndex>
+									<numIndex index="1">1</numIndex>
+								</numIndex>
+								<numIndex index="2">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions.2</numIndex>
+									<numIndex index="1">2</numIndex>
+								</numIndex>
+							</items>
+							<default>0</default>
+						</config>
+					</settings.PopupOptions>
+
+					<settings.ScrollWheelZoom>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.scrollWheelZoom</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.ScrollWheelZoom>
+
+					<settings.DisplayZoomButtons>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayZoomButtons</label>
+						<config>
+							<type>check</type>
+							<default>1</default>
+						</config>
+					</settings.DisplayZoomButtons>
+
+					<settings.DisplayFullScreenButton>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayFullScreenButton</label>
+						<config>
+							<type>check</type>
+							<default>1</default>
+						</config>
+					</settings.DisplayFullScreenButton>
+
+				</el>
+			</ROOT>
+		</options>
+
+		<about>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.sheet.about</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<about>
+						<exclude>0</exclude>
+						<config>
+							<type>user</type>
+							<userFunc>CMSPACA\RtSimpleosm\Userfuncs\Tca->aboutField</userFunc>
+						</config>
+					</about>
+				</el>
+			</ROOT>
+		</about>
+
+	</sheets>
+</T3DataStructure>
