@@ -37,10 +37,10 @@ class OsmController extends ActionController  {
 	protected $osmRepository;
 
 	/**
-	 * CloudZoneRepository injector
+	 * Osm Repository injector
 	 * @param OsmRepository $osmRepository
 	 */
-	public function injectCloudZoneRepository(OsmRepository $osmRepository) {
+	public function injectOsmRepository(OsmRepository $osmRepository) {
 		$this->osmRepository = $osmRepository;
 	}
 
