@@ -11,7 +11,7 @@
 ChangeLog
 =========
 
-2019-03-16 : First upload of the extension in version 1.0.2.
+2019-03-16 : Upload of the extension in version 1.0.2.
 Add CDN for leaflet JS and CSS as an alternative.
 
 2019-03-16 : First upload of the extension in version 1.0.0.
