@@ -23,162 +23,164 @@ class PageLayoutViewDrawItemHook implements PageLayoutViewDrawItemHookInterface 
 	 */
 	private $beosm_template = 'EXT:rt_simpleosm/Resources/Private/Templates/Backend/Rtsimpleosm-Plugin-BackendTemplate.html';
 
-    /**
-     * Rendering for custom content elements
-     *
-     * @param PageLayoutView $parentObject
-     * @param bool $drawItem
-     * @param string $headerContent
-     * @param string $itemContent
-     * @param array $row
-     */
-    public function preProcess(PageLayoutView &$parentObject, &$drawItem, &$headerContent, &$itemContent, array &$row) {
-    	
-	    $plugins = [ 'rtsimpleosm_sosm' ];
+	/**
+	 * Rendering for custom content elements
+	 *
+	 * @param PageLayoutView $parentObject
+	 * @param bool $drawItem
+	 * @param string $headerContent
+	 * @param string $itemContent
+	 * @param array $row
+	 */
+	public function preProcess( PageLayoutView &$parentObject, &$drawItem, &$headerContent, &$itemContent, array &$row ) {
 
-	    if ( !in_array( $row['list_type'], $plugins ) ) {
-		    return;
-	    }
+		$plugins = [ 'rtsimpleosm_sosm' ];
 
-	    $drawItem = false;
+		if ( ! in_array( $row['list_type'], $plugins ) ) {
+			return;
+		}
 
-	    $noHeaderFound = LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_be.xlf:simpleosm.backend.noHeaderFound', 'rt_simpleosm' );
+		$drawItem = false;
 
-	    $title = empty( $row['header'] ) ? '[ ' . $noHeaderFound . ' ]' : $row['header'] . ' ' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_be.xlf:simpleosm.backend.headerLayout.' . $row['header_layout'], 'rt_simpleosm' );
-	    $headerContent = '<strong>' . htmlspecialchars( $title ) . '</strong><br />';
+		$noHeaderFound = LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_be.xlf:simpleosm.backend.noHeaderFound', 'rt_simpleosm' );
 
-	    $flexform = $this->cleanUpArray( GeneralUtility::xml2array( $row['pi_flexform'] ), array(
-		    'data',
-		    'lDEF',
-		    'vDEF'
-	    ) );
+		$title         = empty( $row['header'] ) ? '[ ' . $noHeaderFound . ' ]' : $row['header'] . ' ' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_be.xlf:simpleosm.backend.headerLayout.' . $row['header_layout'], 'rt_simpleosm' );
+		$headerContent = '<strong>' . htmlspecialchars( $title ) . '</strong><br />';
 
-	    $flex = [];
+		$flexform = $this->cleanUpArray( GeneralUtility::xml2array( $row['pi_flexform'] ), array(
+			'data',
+			'lDEF',
+			'vDEF'
+		) );
 
-	    // Get extension configuration
-	    $extConf = '';
-	    if(version_compare(TYPO3_version, '9.0', '<')) {
-		    $extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rt_simpleosm']);
-	    } elseif(version_compare(TYPO3_version, '9.0', '>=')) {
-		    $extConf = GeneralUtility::makeInstance( TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class )->get('rt_simpleosm');
-	    }
-	    switch($extConf['backendPluginInterfaceBackground']) {
-		    case '0':
-			    $flex['background_style'] = 'background: url(\''.$extConf['backendPluginInterfaceBackgroundImage'].'\')';
-		    	break;
+		$flex = [];
 
-		    case '1':
-			    $flex['background_style'] = 'background-color: '.$extConf['backendPluginInterfaceBackgroundColor'];
-		    	break;
-	    }
+		// Get extension configuration
+		$extConf = '';
+		if ( version_compare( TYPO3_version, '9.0', '<' ) ) {
+			$extConf = unserialize( $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rt_simpleosm'] );
+		} elseif ( version_compare( TYPO3_version, '9.0', '>=' ) ) {
+			$extConf = GeneralUtility::makeInstance( TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class )->get( 'rt_simpleosm' );
+		}
+		switch ( $extConf['backendPluginInterfaceBackground'] ) {
+			case '0':
+				$flex['background_style'] = 'background: url(\'' . $extConf['backendPluginInterfaceBackgroundImage'] . '\')';
+				break;
 
-	    $flex['contents'] = [];
+			case '1':
+				$flex['background_style'] = 'background-color: ' . $extConf['backendPluginInterfaceBackgroundColor'];
+				break;
+		}
 
-	    //****************************
-	    // Plugin Simple OSM
-	    //****************************
-	    $fluidTmplFilePath       = GeneralUtility::getFileAbsFileName( $this->beosm_template );
-	    $flex['plugin_icon']     = 'rt_simpleosm-plugin-sosm';
-	    $flex['plugin_title']    = LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.name', 'rt_simpleosm' );
+		$flex['contents'] = [];
 
-	    if(empty($flexform['mapselection']['settings.MapRecord'])) {
-		    $flex['contents'][] = '<h4><i class="fa fa-warning" style="color:#FF0000;"></i>&nbsp;' . LocalizationUtility::translate('LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_be.xlf:simpleosm.message.selectAMapRecord', 'rt_simpleosm') . '</h4>';
-	    } else {
-		    $mapRecord = $flexform['mapselection']['settings.MapRecord'];
-		    $mapRecordId = (int)substr($mapRecord, strrpos($mapRecord, "_")+1);
+		//****************************
+		// Plugin Simple OSM
+		//****************************
+		$fluidTmplFilePath    = GeneralUtility::getFileAbsFileName( $this->beosm_template );
+		$flex['plugin_icon']  = 'rt_simpleosm-plugin-sosm';
+		$flex['plugin_title'] = LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.name', 'rt_simpleosm' );
 
-		    if(version_compare(TYPO3_version, '8.0', '<')) {
-			    // Database connection
-		    	global $TYPO3_DB;
-		    	$fields = "`uid`,`title`,`latitude`,`longitude`,`address`";
-			    $where_clause = "`uid`=" . $mapRecordId;
-			    $selectedOsm = $TYPO3_DB->exec_SELECTgetSingleRow($fields, $this->osm_table, $where_clause);
+		if ( empty( $flexform['mapselection']['settings.MapRecord'] ) ) {
+			$flex['contents'][] = '<h4><i class="fa fa-warning" style="color:#FF0000;"></i>&nbsp;' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_be.xlf:simpleosm.message.selectAMapRecord', 'rt_simpleosm' ) . '</h4>';
+		} else {
+			$mapRecord   = $flexform['mapselection']['settings.MapRecord'];
+			$mapRecordId = (int) substr( $mapRecord, strrpos( $mapRecord, "_" ) + 1 );
 
-		    } elseif(version_compare(TYPO3_version, '8.0', '>=')) {
-			    // Database connection
-			    $connectionPool = GeneralUtility::makeInstance( \TYPO3\CMS\Core\Database\ConnectionPool::class );
-			    $pageQueryBuilder = $connectionPool->getQueryBuilderForTable( $this->osm_table );
+			if ( version_compare( TYPO3_version, '8.0', '<' ) ) {
+				// Database connection
+				global $TYPO3_DB;
+				$fields       = "`uid`,`title`,`latitude`,`longitude`,`address`";
+				$where_clause = "`uid`=" . $mapRecordId;
+				$selectedOsm  = $TYPO3_DB->exec_SELECTgetSingleRow( $fields, $this->osm_table, $where_clause );
 
-			    // Get OSM infos
-			    $selectedOsm = $pageQueryBuilder
-				    ->select( 'uid', 'title', 'latitude', 'longitude', 'address' )
-				    ->from( $this->osm_table )
-				    ->where( $pageQueryBuilder->expr()->eq( 'uid', $pageQueryBuilder->createNamedParameter( $mapRecordId, \PDO::PARAM_INT ) ) )
-				    ->execute()
-				    ->fetch();
-		    }
-		    
-		    $osm                = [];
-		    $osm['icon']        = '../typo3conf/ext/rt_simpleosm/Resources/Public/Icons/user_plugin_sosm.svg';
-		    $osm['uid']         = $selectedOsm['uid'];
-		    $osm['title']       = $selectedOsm['title'];
-		    $osm['latitude']    = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.latitude', 'rt_simpleosm' ) . '</em></strong>: ' . $selectedOsm['latitude'] . '.<br />';
-		    $osm['longitude']   = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.longitude', 'rt_simpleosm' ) . '</em></strong>: ' . $selectedOsm['longitude'] . '.<br />';
-		    $osm['address']     = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.address', 'rt_simpleosm' ) . '</em></strong>: ' . $selectedOsm['address'] . '.<br />';
-		    
-		    $flex['contents'] = [ 'osm' => $osm ];
-	    }
+			} elseif ( version_compare( TYPO3_version, '8.0', '>=' ) ) {
+				// Database connection
+				$connectionPool   = GeneralUtility::makeInstance( \TYPO3\CMS\Core\Database\ConnectionPool::class );
+				$pageQueryBuilder = $connectionPool->getQueryBuilderForTable( $this->osm_table );
 
-	    if(!empty($flexform['styling']['settings.MapStyle'])) {
-		    $flex['contents']['mapStyleImg'] = '../typo3conf/ext/rt_simpleosm/Resources/Public/maps/map_' . $flexform['styling']['settings.MapStyle'] . '.png';
-		    $flex['contents']['mapStyleLabel'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle', 'rt_simpleosm' ) . '</em></strong>: ' . LocalizationUtility::translate('LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.'.$flexform['styling']['settings.MapStyle'], 'rt_simpleosm') . '.';
-	    }
+				// Get OSM infos
+				$selectedOsm = $pageQueryBuilder
+					->select( 'uid', 'title', 'latitude', 'longitude', 'address' )
+					->from( $this->osm_table )
+					->where( $pageQueryBuilder->expr()->eq( 'uid', $pageQueryBuilder->createNamedParameter( $mapRecordId, \PDO::PARAM_INT ) ) )
+					->execute()
+					->fetch();
+			}
 
-	    if(!empty($flexform['styling']['settings.MapWidth'])) {
-		    $flex['contents']['mapWidth'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapWidth', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['styling']['settings.MapWidth'] . '.<br />';
-	    }
+			$osm              = [];
+			$osm['icon']      = '../typo3conf/ext/rt_simpleosm/Resources/Public/Icons/user_plugin_sosm.svg';
+			$osm['uid']       = $selectedOsm['uid'];
+			$osm['title']     = $selectedOsm['title'];
+			$osm['latitude']  = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.latitude', 'rt_simpleosm' ) . '</em></strong>: ' . $selectedOsm['latitude'] . '.<br />';
+			$osm['longitude'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.longitude', 'rt_simpleosm' ) . '</em></strong>: ' . $selectedOsm['longitude'] . '.<br />';
+			$osm['address']   = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.address', 'rt_simpleosm' ) . '</em></strong>: ' . $selectedOsm['address'] . '.<br />';
 
-	    if(!empty($flexform['styling']['settings.MapHeight'])) {
-		    $flex['contents']['mapHeight'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapHeight', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['styling']['settings.MapHeight'] . '.<br />';
-	    }
+			$flex['contents'] = [ 'osm' => $osm ];
+		}
 
-	    if(!empty($flexform['styling']['settings.BorderRadiusMap'])) {
-		    $flex['contents']['borderRadiusMap'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.borderRadiusMap', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['styling']['settings.BorderRadiusMap'] . '.<br />';
-	    }
+		if ( ! empty( $flexform['styling']['settings.MapStyle'] ) ) {
+			$flex['contents']['mapStyleImg']   = '../typo3conf/ext/rt_simpleosm/Resources/Public/maps/map_' . $flexform['styling']['settings.MapStyle'] . '.png';
+			$flex['contents']['mapStyleLabel'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle', 'rt_simpleosm' ) . '</em></strong>: ' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.' . $flexform['styling']['settings.MapStyle'], 'rt_simpleosm' ) . '.';
+		}
 
-	    if(!empty($flexform['options']['settings.Zoom'])) {
-		    $flex['contents']['zoom'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.zoom', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.Zoom'] . '.<br />';
-	    }
+		if ( ! empty( $flexform['styling']['settings.MapWidth'] ) ) {
+			$flex['contents']['mapWidth'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapWidth', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['styling']['settings.MapWidth'] . '.<br />';
+		}
 
-	    if(!empty($flexform['options']['settings.PopupOptions'])) {
-		    $flex['contents']['popupOptions'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions', 'rt_simpleosm' ) . '</em></strong>: ' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions.' . $flexform['options']['settings.PopupOptions'], 'rt_simpleosm' ) . '.<br />';
-	    }
+		if ( ! empty( $flexform['styling']['settings.MapHeight'] ) ) {
+			$flex['contents']['mapHeight'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapHeight', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['styling']['settings.MapHeight'] . '.<br />';
+		}
 
-	    if(!empty($flexform['options']['settings.ScrollWheelZoom'])) {
-		    $flex['contents']['scrollWheelZoom'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.scrollWheelZoom', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.ScrollWheelZoom'] . '.<br />';
-	    }
+		if ( ! empty( $flexform['styling']['settings.BorderRadiusMap'] ) ) {
+			$flex['contents']['borderRadiusMap'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.borderRadiusMap', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['styling']['settings.BorderRadiusMap'] . '.<br />';
+		}
 
-	    if(!empty($flexform['options']['settings.DisplayZoomButtons'])) {
-		    $flex['contents']['displayZoomButtons'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayZoomButtons', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.DisplayZoomButtons'] . '.<br />';
-	    }
+		if ( ! empty( $flexform['options']['settings.Zoom'] ) ) {
+			$flex['contents']['zoom'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.zoom', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.Zoom'] . '.<br />';
+		}
 
-	    if(!empty($flexform['options']['settings.DisplayFullScreenButton'])) {
-		    $flex['contents']['displayFullScreenButton'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayFullScreenButton', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.DisplayFullScreenButton'] . '.<br />';
-	    }
+		if ( ! empty( $flexform['options']['settings.PopupOptions'] ) ) {
+			$flex['contents']['popupOptions'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions', 'rt_simpleosm' ) . '</em></strong>: ' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions.' . $flexform['options']['settings.PopupOptions'], 'rt_simpleosm' ) . '.<br />';
+		}
 
-        // HTML Template loading
-        $fluidTmpl = GeneralUtility::makeInstance('TYPO3\CMS\Fluid\View\StandaloneView');
-        $fluidTmpl->setTemplatePathAndFilename($fluidTmplFilePath);
-        $fluidTmpl->assign('flex', $flex);
+		if ( ! empty( $flexform['options']['settings.ScrollWheelZoom'] ) ) {
+			$flex['contents']['scrollWheelZoom'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.scrollWheelZoom', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.ScrollWheelZoom'] . '.<br />';
+		}
 
-        // Render final content
-        $itemContent = $parentObject->linkEditContent($fluidTmpl->render(), $row);
-    }
+		if ( ! empty( $flexform['options']['settings.DisplayZoomButtons'] ) ) {
+			$flex['contents']['displayZoomButtons'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayZoomButtons', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.DisplayZoomButtons'] . '.<br />';
+		}
+
+		if ( ! empty( $flexform['options']['settings.DisplayFullScreenButton'] ) ) {
+			$flex['contents']['displayFullScreenButton'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayFullScreenButton', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.DisplayFullScreenButton'] . '.<br />';
+		}
+
+		// HTML Template loading
+		$fluidTmpl = GeneralUtility::makeInstance( 'TYPO3\CMS\Fluid\View\StandaloneView' );
+		$fluidTmpl->setTemplatePathAndFilename( $fluidTmplFilePath );
+		$fluidTmpl->assign( 'flex', $flex );
+
+		// Render final content
+		$itemContent = $parentObject->linkEditContent( $fluidTmpl->render(), $row );
+	}
 
 	/**
 	 * @param array $cleanUpArray
 	 * @param array $notAllowed
+	 *
 	 * @return array|mixed
 	 */
-	protected function cleanUpArray(array $cleanUpArray, array $notAllowed) {
+	protected function cleanUpArray( array $cleanUpArray, array $notAllowed ) {
 		$cleanArray = array();
-		foreach ($cleanUpArray as $key => $value) {
-			if(in_array($key, $notAllowed)) {
-				return is_array($value) ? $this->cleanUpArray($value, $notAllowed) : $value;
-			} else if(is_array($value)) {
-				$cleanArray[$key] = $this->cleanUpArray($value, $notAllowed);
+		foreach ( $cleanUpArray as $key => $value ) {
+			if ( in_array( $key, $notAllowed ) ) {
+				return is_array( $value ) ? $this->cleanUpArray( $value, $notAllowed ) : $value;
+			} else if ( is_array( $value ) ) {
+				$cleanArray[ $key ] = $this->cleanUpArray( $value, $notAllowed );
 			}
 		}
+
 		return $cleanArray;
 	}
 }

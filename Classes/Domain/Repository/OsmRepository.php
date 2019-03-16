@@ -33,11 +33,4 @@ namespace CMSPACA\RtSimpleosm\Domain\Repository;
  */
 class OsmRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
-    /**
-     * @var array download repository sorting
-     */
-    protected $defaultOrderings = array(
-        'sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
-    );
-
 }

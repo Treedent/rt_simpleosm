@@ -9,3 +9,6 @@ backendPluginInterfaceBackgroundColor = #9ed284
 
 # cat=Backend interface/configure/30; type=boolean; label=LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_be.xlf:simpleosm.extmng.backendPluginInterfaceBackground
 backendPluginInterfaceBackground = 0
+
+# cat=Backend interface/configure/40; type=boolean; label=LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_be.xlf:simpleosm.extmng.useCdn
+useCdn = 1
