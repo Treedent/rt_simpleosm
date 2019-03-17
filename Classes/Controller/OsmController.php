@@ -212,7 +212,7 @@ class OsmController extends ActionController {
 		if ( version_compare( TYPO3_version, '9.0', '<' ) ) {
 			$extConf = unserialize( $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rt_simpleosm'] );
 		} elseif ( version_compare( TYPO3_version, '9.0', '>=' ) ) {
-			$extConf = GeneralUtility::makeInstance( TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class )->get( 'rt_simpleosm' );
+			$extConf = GeneralUtility::makeInstance( \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class )->get( 'rt_simpleosm' );
 		}
 
 		// Inject leaflet CSS
