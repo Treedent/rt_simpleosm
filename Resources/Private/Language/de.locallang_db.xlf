@@ -45,7 +45,7 @@
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.sheet.about">
 				<source>About</source>
-				<target>À propos</target>
+				<target>Über</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapRecord">
 				<source>Map record</source>
