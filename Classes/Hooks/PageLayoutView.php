@@ -60,8 +60,9 @@ class PageLayoutViewDrawItemHook implements PageLayoutViewDrawItemHookInterface 
 		if ( version_compare( TYPO3_version, '9.0', '<' ) ) {
 			$extConf = unserialize( $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['rt_simpleosm'] );
 		} elseif ( version_compare( TYPO3_version, '9.0', '>=' ) ) {
-			$extConf = GeneralUtility::makeInstance( TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class )->get( 'rt_simpleosm' );
+			$extConf = GeneralUtility::makeInstance( \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class )->get( 'rt_simpleosm' );
 		}
+
 		switch ( $extConf['backendPluginInterfaceBackground'] ) {
 			case '0':
 				$flex['background_style'] = 'background: url(\'' . $extConf['backendPluginInterfaceBackgroundImage'] . '\')';
@@ -119,40 +120,40 @@ class PageLayoutViewDrawItemHook implements PageLayoutViewDrawItemHookInterface 
 			$flex['contents'] = [ 'osm' => $osm ];
 		}
 
-		if ( ! empty( $flexform['styling']['settings.MapStyle'] ) ) {
+		if ( !empty( $flexform['styling']['settings.MapStyle'] || $flexform['styling']['settings.MapStyle'] === '0') ) {
 			$flex['contents']['mapStyleImg']   = '../typo3conf/ext/rt_simpleosm/Resources/Public/maps/map_' . $flexform['styling']['settings.MapStyle'] . '.png';
 			$flex['contents']['mapStyleLabel'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle', 'rt_simpleosm' ) . '</em></strong>: ' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.' . $flexform['styling']['settings.MapStyle'], 'rt_simpleosm' ) . '.';
 		}
 
-		if ( ! empty( $flexform['styling']['settings.MapWidth'] ) ) {
+		if ( !empty( $flexform['styling']['settings.MapWidth'] ) ) {
 			$flex['contents']['mapWidth'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapWidth', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['styling']['settings.MapWidth'] . '.<br />';
 		}
 
-		if ( ! empty( $flexform['styling']['settings.MapHeight'] ) ) {
+		if ( !empty( $flexform['styling']['settings.MapHeight'] ) ) {
 			$flex['contents']['mapHeight'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapHeight', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['styling']['settings.MapHeight'] . '.<br />';
 		}
 
-		if ( ! empty( $flexform['styling']['settings.BorderRadiusMap'] ) ) {
+		if ( !empty( $flexform['styling']['settings.BorderRadiusMap'] ) ) {
 			$flex['contents']['borderRadiusMap'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.borderRadiusMap', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['styling']['settings.BorderRadiusMap'] . '.<br />';
 		}
 
-		if ( ! empty( $flexform['options']['settings.Zoom'] ) ) {
+		if ( !empty( $flexform['options']['settings.Zoom'] ) ) {
 			$flex['contents']['zoom'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.zoom', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.Zoom'] . '.<br />';
 		}
 
-		if ( ! empty( $flexform['options']['settings.PopupOptions'] ) ) {
+		if ( !empty( $flexform['options']['settings.PopupOptions'] ) ) {
 			$flex['contents']['popupOptions'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions', 'rt_simpleosm' ) . '</em></strong>: ' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions.' . $flexform['options']['settings.PopupOptions'], 'rt_simpleosm' ) . '.<br />';
 		}
 
-		if ( ! empty( $flexform['options']['settings.ScrollWheelZoom'] ) ) {
+		if ( !empty( $flexform['options']['settings.ScrollWheelZoom'] ) ) {
 			$flex['contents']['scrollWheelZoom'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.scrollWheelZoom', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.ScrollWheelZoom'] . '.<br />';
 		}
 
-		if ( ! empty( $flexform['options']['settings.DisplayZoomButtons'] ) ) {
+		if ( !empty( $flexform['options']['settings.DisplayZoomButtons'] ) ) {
 			$flex['contents']['displayZoomButtons'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayZoomButtons', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.DisplayZoomButtons'] . '.<br />';
 		}
 
-		if ( ! empty( $flexform['options']['settings.DisplayFullScreenButton'] ) ) {
+		if ( !empty( $flexform['options']['settings.DisplayFullScreenButton'] ) ) {
 			$flex['contents']['displayFullScreenButton'] = '<strong><em>' . LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayFullScreenButton', 'rt_simpleosm' ) . '</em></strong>: ' . $flexform['options']['settings.DisplayFullScreenButton'] . '.<br />';
 		}
 
