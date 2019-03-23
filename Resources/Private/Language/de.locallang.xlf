@@ -9,19 +9,19 @@
 			</trans-unit>
 			<trans-unit id="tx_rtsimpleosm_domain_model_osm.title">
 				<source>Map title</source>
-				<target>Karte-Titel</target>
+				<target>Titel</target>
 			</trans-unit>
 			<trans-unit id="tx_rtsimpleosm_domain_model_osm.address">
 				<source>Map address</source>
-				<target>Karte-Adresse</target>
+				<target>Adresse</target>
 			</trans-unit>
 			<trans-unit id="tx_rtsimpleosm_domain_model_osm.latitude">
 				<source>Map latitude</source>
-				<target>Karte-Breitengrad</target>
+				<target>Breitengrad</target>
 			</trans-unit>
 			<trans-unit id="tx_rtsimpleosm_domain_model_osm.longitude">
 				<source>Map longitude</source>
-				<target>Karte-Längengrad</target>
+				<target>Längengrad</target>
 			</trans-unit>
 			<trans-unit id="map.label.zoomIn">
 				<source>Zoom in</source>

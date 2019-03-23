@@ -17,23 +17,23 @@
 			</trans-unit>
 			<trans-unit id="tx_rtsimpleosm_domain_model_osm.latitude">
 				<source>Map latitude</source>
-				<target>Karte-Breitengrad</target>
+				<target>Breitengrad</target>
 			</trans-unit>
 			<trans-unit id="tx_rtsimpleosm_domain_model_osm.longitude">
 				<source>Map longitude</source>
-				<target>Karte-Längengrad</target>
+				<target>Längengrad</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.name">
 				<source>Simple OpenStreetMap</source>
-				<target>Simpel OpenStreetMap</target>
+				<target>Einfache OpenStreetMap</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.description">
 				<source>Insert a simple OpenStreetMap.</source>
-				<target>Fûgen Sie simpel OpenStreetMap ein.</target>
+				<target>Fûgen Sie OpenStreetMap ein.</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.sheet.mapSelection">
 				<source>Map selection</source>
-				<target>Karte Auswahl</target>
+				<target>Kartenauswahl</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.sheet.styling">
 				<source>Style</source>
@@ -49,19 +49,19 @@
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapRecord">
 				<source>Map record</source>
-				<target>Karte-Rekord</target>
+				<target>Datensatz</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapWidth">
 				<source>Map width</source>
-				<target>Karte Breite</target>
+				<target>Breite</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapHeight">
 				<source>Map height</source>
-				<target>Karte Höhe</target>
+				<target>Höhe</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle">
 				<source>Map style</source>
-				<target>Karte Stil</target>
+				<target>Stil</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.0">
 				<source>OpenStreetMap classic</source>
@@ -77,7 +77,7 @@
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.3">
 				<source>Stamen Design toner lite</source>
-				<target>Stamen Design toner lite</target>
+				<target>Stamen Design, leichte tönung</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.4">
 				<source>Stamen Design terrain</source>
@@ -85,15 +85,15 @@
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.5">
 				<source>Stamen Design watercolor + Hydda roads and labels</source>
-				<target>Stamen Design watercolor + Hydda Straßen und Etiketten</target>
+				<target>Stamen Design Wasserrfarben + Hydda Straßen und Etiketten</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.6">
 				<source>MTB Map (Europe only)</source>
-				<target>MTB karte (Europa nur)</target>
+				<target>MTB-Karte (Europa nur)</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.7">
 				<source>ESRI World Street Map</source>
-				<target>ESRI Welt Straße Karte</target>
+				<target>ESRI Welt Straßenkarte</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.8">
 				<source>CartoDB Positron</source>
@@ -113,23 +113,23 @@
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.scrollWheelZoom">
 				<source>Zoom on mouse wheel scroll</source>
-				<target>Steilflug auf Maus-Rad-Schriftrolle</target>
+				<target>Zoomfahrt mit Mausrad</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.displayZoomButtons">
 				<source>Display zoom buttons</source>
-				<target>Zeigen Sie Zoom Knopf</target>
+				<target>Zoom-Anzeige</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.displayFullScreenButton">
 				<source>Display fullscreen button</source>
-				<target>Zeigen Sie fullscreen Knopf</target>
+				<target>Fullscreen-Anzeige</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.borderRadiusMap">
 				<source>Map border radius</source>
-				<target>Karte Grenzradius</target>
+				<target>Grenzradius der Karte</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions">
 				<source>Map popup options</source>
-				<target>Karte Popup Optionen</target>
+				<target>Popup-Optionen</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.0">
 				<source>No marker and no popup</source>

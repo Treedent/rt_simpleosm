@@ -5,19 +5,19 @@
 		<body>
 			<trans-unit id="title.description">
 				<source>Map title</source>
-				<target>Karte-Titel</target>
+				<target>Kartentitel</target>
 			</trans-unit>
 			<trans-unit id="address.description">
 				<source>Map address</source>
-				<target>Karte-Adresse</target>
+				<target>Kartenadresse</target>
 			</trans-unit>
 			<trans-unit id="latitude.description">
 				<source>Map latitude</source>
-				<target>Karte-Breitengrad</target>
+				<target>Breitengrad</target>
 			</trans-unit>
 			<trans-unit id="longitude.description">
 				<source>Map longitude</source>
-				<target>Karte-Längengrad</target>
+				<target>Längengrad</target>
 			</trans-unit>
 		</body>
 	</file>
