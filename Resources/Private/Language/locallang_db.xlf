@@ -49,7 +49,7 @@
 				<source>Map style</source>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.0">
-				<source>OpenStreetMap classic</source>
+				<source>OpenStreetMap Mapnik</source>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.1">
 				<source>OpenStreetMap black and white</source>
@@ -80,6 +80,18 @@
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.10">
 				<source>ESRI World Imagery + Stamen labels</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.11">
+				<source>OpenStreetMap Germany</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.12">
+				<source>OpenStreetMap France</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.13">
+				<source>OpenTopoMap</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.14">
+				<source>OpenMapSurfer Roads</source>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.zoom">
 				<source>Map zoom factor</source>

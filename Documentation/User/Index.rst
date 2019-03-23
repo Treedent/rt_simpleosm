@@ -42,7 +42,7 @@ You don't really need to create a Folder page for this. You can store this recor
 
 
 .. figure:: ../Images/UserManual/be_enter_map_infos.png
-   :width: 663px
+   :width: 696px
    :alt: Configure an OSM record
 
    Configure an OSM record.
@@ -78,7 +78,7 @@ you will have to configure the desired map by specifing:
 
 
 .. figure:: ../Images/UserManual/be_select_style.png
-   :width: 801px
+   :width: 712px
    :alt: Select a map style, width, height and border radius
 
    OSM plugin: selecting a map style, width, height and border radius.
@@ -94,7 +94,7 @@ you will have to configure the desired map by specifing:
 
 
 .. figure:: ../Images/UserManual/be_plugin.png
-   :width: 582px
+   :width: 511px
    :alt: OSM Plugin appearance in Page module
 
    OSM plugin: Appearance in Page module.

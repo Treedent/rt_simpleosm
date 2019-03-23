@@ -64,8 +64,8 @@
 				<target>Estilo de mapa</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.0">
-				<source>OpenStreetMap classic</source>
-				<target>OpenStreetMap mapa clásico</target>
+				<source>OpenStreetMap Mapnik</source>
+				<target>OpenStreetMap Mapnik mapa</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.1">
 				<source>OpenStreetMap black and white</source>
@@ -106,6 +106,22 @@
 			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.10">
 				<source>ESRI World Imagery + Stamen labels</source>
 				<target>ESRI Mundo imagen + Stamen etiquetas</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.11">
+				<source>OpenStreetMap Germany</source>
+				<target>OpenStreetMap Alemania</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.12">
+				<source>OpenStreetMap France</source>
+				<target>OpenStreetMap Francia</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.13">
+				<source>OpenTopoMap</source>
+				<target>OpenTopoMap</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.14">
+				<source>OpenMapSurfer Roads</source>
+				<target>OpenMapSurfer Carreteras</target>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.zoom">
 				<source>Map zoom factor</source>

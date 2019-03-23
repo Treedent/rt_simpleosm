@@ -21,4 +21,4 @@ Links
 	https://github.com/Treedent/rt_simpleosm
 
 :Contact:
-	`@<username> <https://twitter.com/RegisTEDONE>`__
+	`@<Regis TEDONE> <https://twitter.com/RegisTEDONE>`__

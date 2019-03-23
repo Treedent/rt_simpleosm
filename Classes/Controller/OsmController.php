@@ -94,11 +94,9 @@ class OsmController extends ActionController {
 		$cObj = $this->configurationManager->getContentObject();
 		$cUid = $cObj->data['uid'];
 
-		$displayFullScreen = $displayFullScreenButton === '1' ? ',fullscreenControl: { pseudoFullscreen: true }' : '';
-
 		// Define Map Style
 		switch ( $mapStyle ) {
-			//  OpenStreetMap classic
+			//  OpenStreetMap Mapnik
 			default:
 			case 0:
 				$tileLayer   = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -190,6 +188,38 @@ class OsmController extends ActionController {
 				$minZoom      = 0;
 				$maxZoom      = 18;
 				break;
+
+			// OpenStreetMap Deutschland
+			case 11:
+				$tileLayer    = 'https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png';
+				$attribution  = '{ attribution: \'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors\'}';
+				$minZoom      = 0;
+				$maxZoom      = 18;
+				break;
+
+			// OpenStreetMap France
+			case 12:
+				$tileLayer    = 'https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png';
+				$attribution  = '{ attribution: \'&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors\'}';
+				$minZoom      = 0;
+				$maxZoom      = 18;
+				break;
+
+			// OpenTopoMap
+			case 13:
+				$tileLayer    = 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png';
+				$attribution  = '{ attribution: \'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)\'}';
+				$minZoom      = 0;
+				$maxZoom      = 17;
+				break;
+
+			// OpenMapSurfer Roads
+			case 14:
+				$tileLayer    = 'https://maps.heigit.org/openmapsurfer/tiles/roads/webmercator/{z}/{x}/{y}.png';
+				$attribution  = '{ attribution: \'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors\'}';
+				$minZoom      = 0;
+				$maxZoom      = 18;
+				break;
 		}
 
 		$mapConf = '{
@@ -200,7 +230,6 @@ class OsmController extends ActionController {
             maxZoom: ' . $maxZoom . ',
             animate: true,
             scrollWheelZoom: ' . $scrollWheelZoom . '
-            ' . $displayFullScreen . '
          }
 		';
 
@@ -314,7 +343,7 @@ class OsmController extends ActionController {
 		// Define map coords and add title layer 1
 		$leafletScript = '
                 window[\'coords_' . $cUid . '\'] = [' . $mapLatitude . ', ' . $mapLongitude . '];
-				window[\'map_' . $cUid . '\'] = L.map(\'map_' . $cUid . '\', ' . $mapConf . ');
+				window[\'map_' . $cUid . '\'] = new L.map(\'map_' . $cUid . '\', ' . $mapConf . ');
 				L.tileLayer(\'' . $tileLayer . '\', ' . $attribution . ').addTo(window[\'map_' . $cUid . '\']);
 		';
 
@@ -337,6 +366,18 @@ class OsmController extends ActionController {
 		if ( $popupOptions > 0 ) {
 			$leafletScript .= '
                  L.marker(window[\'coords_' . $cUid . '\']).addTo(window[\'map_' . $cUid . '\']).bindPopup(\'' . $popupContent . '\').openPopup();
+			';
+		}
+
+		// Add full screen button
+		if ( $displayFullScreenButton === '1' ) {
+			$leafletScript .= '
+				window[\'map_' . $cUid . '\'].addControl(new L.Control.Fullscreen({
+                    title: {
+                        \'false\': \''.LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang.xlf:map.label.viewFullscreen', 'rt_simpleosm' ).'\',
+                        \'true\': \''.LocalizationUtility::translate( 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang.xlf:map.label.exitFullscreen', 'rt_simpleosm' ).'\'
+                    }
+				}));
 			';
 		}
 

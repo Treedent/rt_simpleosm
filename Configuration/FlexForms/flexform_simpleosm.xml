@@ -96,6 +96,26 @@
 									<numIndex index="1">10</numIndex>
 									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_10.png</numIndex>
 								</numIndex>
+								<numIndex index="11">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.11</numIndex>
+									<numIndex index="1">11</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_11.png</numIndex>
+								</numIndex>
+								<numIndex index="12">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.12</numIndex>
+									<numIndex index="1">12</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_12.png</numIndex>
+								</numIndex>
+								<numIndex index="13">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.13</numIndex>
+									<numIndex index="1">13</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_13.png</numIndex>
+								</numIndex>
+								<numIndex index="14">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.mapStyle.14</numIndex>
+									<numIndex index="1">14</numIndex>
+									<numIndex index="2">EXT:rt_simpleosm/Resources/Public/maps/map_14.png</numIndex>
+								</numIndex>
 							</items>
 							<showIconTable>1</showIconTable>
 							<fieldWizard>

@@ -23,16 +23,18 @@ Some various options are available such as:
     - Map style,
     - Map width and Height,
     - Map border radius,
-    - Map full with button,
+    - Map zoom buttons,
+    - Map fullscreen button,
     - Map popup options,
     - Map zoom factor,
     - Map zoom on mouse wheel scroll.
 
 With OpenStreetMap and leaflet map tiles providers included in this extension, you don't need any API key.
 
-This extension is provided with English, French, German and Spanish translation.
-If you feel that some translations are not faithful, feel free to contact me at:
-`@<username> <regis.tedone@gmail.com>`__
+This extension is provided with English, French, German,Italian and Spanish translation.
+Thnak to Michael Lang for German translation.
+If you realize that some translations are not faithful, feel free to contact me at:
+`@<Regis TEDONE> <regis.tedone@gmail.com>`__
 
 .. _screenshots:
 
@@ -46,5 +48,5 @@ Screenshots
 
 
 .. figure:: ../Images/cms-paca.png
-   :width: 150px
+   :width: 120px
    :alt: Made by CMS-PACA

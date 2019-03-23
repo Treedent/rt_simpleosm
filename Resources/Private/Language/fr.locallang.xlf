@@ -31,6 +31,14 @@
 				<source>Zoom out</source>
 				<target>Dézoomer</target>
 			</trans-unit>
+			<trans-unit id="map.label.viewFullscreen">
+				<source>View Fullscreen</source>
+				<target>Voir en plein écran</target>
+			</trans-unit>
+			<trans-unit id="map.label.exitFullscreen">
+				<source>Exit Fullscreen</source>
+				<target>Quitter le mode plein écran</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

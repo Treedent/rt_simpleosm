@@ -24,6 +24,12 @@
 			<trans-unit id="map.label.zoomOut">
 				<source>Zoom out</source>
 			</trans-unit>
+			<trans-unit id="map.label.viewFullscreen">
+				<source>View Fullscreen</source>
+			</trans-unit>
+			<trans-unit id="map.label.exitFullscreen">
+				<source>Exit Fullscreen</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

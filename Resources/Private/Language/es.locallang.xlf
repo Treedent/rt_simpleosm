@@ -31,6 +31,14 @@
 				<source>Zoom out</source>
 				<target>Alejarse</target>
 			</trans-unit>
+			<trans-unit id="map.label.viewFullscreen">
+				<source>View Fullscreen</source>
+				<target>Ver en pantalla completa</target>
+			</trans-unit>
+			<trans-unit id="map.label.exitFullscreen">
+				<source>Exit Fullscreen</source>
+				<target>Salir de pantalla completa</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
