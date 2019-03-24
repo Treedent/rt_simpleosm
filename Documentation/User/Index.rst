@@ -21,8 +21,8 @@ you will have to enter for one map
 
     - The title,
     - The adress,
-    - The longitude,
-    - The latitude.
+    - The latitude,
+    - The longitude.
 
 .. tip::
 

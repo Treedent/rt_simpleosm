@@ -31,8 +31,10 @@ Some various options are available such as:
 
 With OpenStreetMap and leaflet map tiles providers included in this extension, you don't need any API key.
 
-This extension is provided with English, French, German,Italian and Spanish translation.
-Thnak to Michael Lang for German translation.
+This extension is provided with English, French, German, Italian and Spanish translation.
+
+Thanks to Michael Lang for German translation.
+
 If you realize that some translations are not faithful, feel free to contact me at:
 `@<Regis TEDONE> <regis.tedone@gmail.com>`__
 
