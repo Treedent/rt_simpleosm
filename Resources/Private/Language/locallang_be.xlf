@@ -13,7 +13,7 @@
                 <source>Use color : Use color instead of image as backend plugin interface background.</source>
             </trans-unit>
             <trans-unit id="simpleosm.extmng.useCdn">
-                <source>Use CDN : Leaflet Library and plugins (JavaScript and CSS) will be download from popular Content Delivery Network (Faster).</source>
+                <source>Use CDN : Leaflet Library and plugins (JavaScript and CSS) will be downloaded from popular Content Delivery Network (Faster).</source>
             </trans-unit>
             <trans-unit id="simpleosm.backend.noHeaderFound">
                 <source>No header found</source>
