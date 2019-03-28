@@ -15,8 +15,8 @@ Target group: **Administrators**
 
 You can adust backend plugin interface appearance by configuring the global extension.
 
-In TYPO3 V7 or V8 : Admin Tools > Extensions Manager > Simple OpenStreetMap (rt_simpleosm) > Cog configuration icon.
-In TYPO3 V9 : Admin Tools > Settings module > Configure extension > rt_simpleosm.
+    - In TYPO3 V7 or V8 : Admin Tools > Extensions Manager > Simple OpenStreetMap (rt_simpleosm) > Cog configuration icon.
+    - In TYPO3 V9 : Admin Tools > Settings module > Configure extension > rt_simpleosm.
 
 Here, you can configure :
 
