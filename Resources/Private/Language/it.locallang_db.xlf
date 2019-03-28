@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="it" datatype="plaintext" original="messages" date="2019-03-01T19:31:10Z" product-name="rt_simpleosm">
+		<header/>
+		<body>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm">
+				<source>Osm</source>
+				<target>Osm</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.title">
+				<source>Title</source>
+				<target>Titolo</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.address">
+				<source>Address</source>
+				<target>Indirizzo</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.latitude">
+				<source>Latitude</source>
+				<target>Latitudine</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.longitude">
+				<source>Longitude</source>
+				<target>Longitudine</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.name">
+				<source>Simple OpenStreetMap</source>
+				<target>Semplice mappa OpenStreetMap</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.description">
+				<source>Insert a simple OpenStreetMap.</source>
+				<target>Inserisci una semplice OpenStreetMap.</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.sheet.mapSelection">
+				<source>Map selection</source>
+				<target>Selezione della mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.sheet.styling">
+				<source>Style</source>
+				<target>Stile</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.sheet.options">
+				<source>Options</source>
+				<target>Opzioni</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.sheet.about">
+				<source>About</source>
+				<target>Riguardo a</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapRecord">
+				<source>Map record</source>
+				<target>Record della mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapWidth">
+				<source>Map width</source>
+				<target>Larghezza della mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapHeight">
+				<source>Map height</source>
+				<target>Altezza della mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle">
+				<source>Map style</source>
+				<target>Stile della mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.0">
+				<source>OpenStreetMap Mapnik</source>
+				<target>OpenStreetMap Mapnik mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.1">
+				<source>OpenStreetMap black and white</source>
+				<target>OpenStreetMap bianco e nero</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.2">
+				<source>OpenStreetMap hot</source>
+				<target>OpenStreetMap hot mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.3">
+				<source>Stamen Design toner lite</source>
+				<target>Stamen Design toner lite mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.4">
+				<source>Stamen Design terrain</source>
+				<target>Stamen Design terreno mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.5">
+				<source>Stamen Design watercolor + Hydda roads and labels</source>
+				<target>Stamen Design watercolor mappa + Strade e etichette Hydda</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.6">
+				<source>MTB Map (Europe only)</source>
+				<target>MTB mappa (Solo Europa)</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.7">
+				<source>ESRI World Street Map</source>
+				<target>Mappa stradale del mondo ESRI</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.8">
+				<source>CartoDB Positron</source>
+				<target>CartoDB Positron mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.9">
+				<source>Hydda full Map</source>
+				<target>Mappa completa Hydda</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.10">
+				<source>ESRI World Imagery + Stamen labels</source>
+				<target>ESRI Immagini del mondo mappa + etichetta Stamen</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.11">
+				<source>OpenStreetMap Germany</source>
+				<target>OpenStreetMap Germania</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.12">
+				<source>OpenStreetMap France</source>
+				<target>OpenStreetMap Francia</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.13">
+				<source>OpenTopoMap</source>
+				<target>OpenTopoMap</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.14">
+				<source>OpenMapSurfer Roads</source>
+				<target>OpenMapSurfer Strade</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.zoom">
+				<source>Map zoom factor</source>
+				<target>Fattore di zoom della mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.scrollWheelZoom">
+				<source>Zoom on mouse wheel scroll</source>
+				<target>Ingrandisci lo scroll del mouse</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.displayZoomButtons">
+				<source>Display zoom buttons</source>
+				<target>Mostra i pulsanti dello zoom</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.displayFullScreenButton">
+				<source>Display fullscreen button</source>
+				<target>Visualizza il pulsante a schermo intero</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.borderRadiusMap">
+				<source>Map border radius</source>
+				<target>Raggio del bordo mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions">
+				<source>Map popup options</source>
+				<target>Opzioni popup della mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.0">
+				<source>No marker and no popup</source>
+				<target>Nessun indicatore e nessun popup</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.1">
+				<source>Popup with title</source>
+				<target>Popup con titolo</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.2">
+				<source>Popup with title and address</source>
+				<target>Popup con titolo e indirizzo</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

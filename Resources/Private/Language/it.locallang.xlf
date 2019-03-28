@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="it" datatype="plaintext" original="messages" date="2019-03-01T19:31:10Z" product-name="rt_simpleosm">
+		<header/>
+		<body>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm">
+				<source>Osm</source>
+				<target>Osm</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.title">
+				<source>Map title</source>
+				<target>Titolo della mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.address">
+				<source>Map address</source>
+				<target>Indirizzo della mappa</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.latitude">
+				<source>Map latitude</source>
+				<target>Latitudine</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.longitude">
+				<source>Map longitude</source>
+				<target>Longitudine</target>
+			</trans-unit>
+			<trans-unit id="map.label.zoomIn">
+				<source>Zoom in</source>
+				<target>Ingrandire</target>
+			</trans-unit>
+			<trans-unit id="map.label.zoomOut">
+				<source>Zoom out</source>
+				<target>Diminuire</target>
+			</trans-unit>
+			<trans-unit id="map.label.viewFullscreen">
+				<source>View Fullscreen</source>
+				<target>Visualizza a schermo intero</target>
+			</trans-unit>
+			<trans-unit id="map.label.exitFullscreen">
+				<source>Exit Fullscreen</source>
+				<target>Esci dalla modalità schermo intero</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
