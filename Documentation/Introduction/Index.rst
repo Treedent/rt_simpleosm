@@ -17,7 +17,7 @@ Introduction
 What does it do?
 ----------------
 
-This extension gives the ability to TYPO3 editors to insert asimple OpenStreetMaps into a page.
+This extension gives the ability to TYPO3 editors to insert a simple OpenStreetMaps into a page.
 Some various options are available such as:
 
     - Map style,
