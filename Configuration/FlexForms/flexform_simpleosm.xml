@@ -15,13 +15,11 @@
                             <type>group</type>
                             <internal_type>db</internal_type>
                             <allowed>tx_rtsimpleosm_domain_model_osm</allowed>
-                            <size>1</size>
+                            <size>3</size>
 							<minitems>1</minitems>
-							<maxitems>1</maxitems>
 							<eval>required</eval>
                         </config>
 					</settings.MapRecord>
-
 				</el>
 			</ROOT>
 		</mapselection>

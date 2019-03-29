@@ -13,6 +13,7 @@ namespace CMSPACA\RtSimpleosm\Controller;
  *
  ***/
 
+use CMSPACA\RtSimpleosm\Domain\Model\Osm;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Page\PageRenderer;
@@ -64,31 +65,12 @@ class OsmController extends ActionController {
 		$mapStyle                = $this->settings['MapStyle'];
 		$popupOptions            = (int) $this->settings['PopupOptions'];
 
-		//Get Map record
-		$mapRecord = $this->settings['MapRecord'];
-		$mapUid    = (int) substr( $mapRecord, strrpos( $mapRecord, "_" ) + 1 );
-		$map       = $this->osmRepository->findByUid( $mapUid );
-
-		$mapLatitude  = $map->getLatitude();
-		$mapLongitude = $map->getLongitude();
-
-		//Define popup content
-		$popupContent = '';
-		switch ( $popupOptions ) {
-			case 0:
-				$popupContent = '';
-				break;
-			case 1:
-				$popupContent = trim( str_replace( array( "\n\r", "\n", "\r" ), '', $map->getTitle() ) );
-				break;
-			case 2:
-				$popupContent = trim( str_replace( array(
-					"\n\r",
-					"\n",
-					"\r"
-				), '', $map->getTitle() . '<br />' . nl2br( $map->getAddress() ) ) );
-				break;
-		}
+		// Get Map records IDs
+		preg_match_all( '/tx_rtsimpleosm_domain_model_osm_(\d+),?/', $this->settings['MapRecord'], $mapRecords );
+		// Get all OSM Objects with those IDs
+		$markers = array_map( array( $this->osmRepository, "findByUid" ), $mapRecords[1] );
+		// Remove empty markers (in case findByUid returns null)
+		$markers = array_filter( $markers );
 
 		// Get current event plugin uid
 		$cObj = $this->configurationManager->getContentObject();
@@ -223,8 +205,6 @@ class OsmController extends ActionController {
 		}
 
 		$mapConf = '{
-            center: window[\'coords_' . $cUid . '\'],
-            zoom: ' . $zoom . ',
             zoomControl: false,     
             minZoom: ' . $minZoom . ',
             maxZoom: ' . $maxZoom . ',
@@ -342,7 +322,6 @@ class OsmController extends ActionController {
 
 		// Define map coords and add title layer 1
 		$leafletScript = '
-                window[\'coords_' . $cUid . '\'] = [' . $mapLatitude . ', ' . $mapLongitude . '];
 				window[\'map_' . $cUid . '\'] = new L.map(\'map_' . $cUid . '\', ' . $mapConf . ');
 				L.tileLayer(\'' . $tileLayer . '\', ' . $attribution . ').addTo(window[\'map_' . $cUid . '\']);
 		';
@@ -362,12 +341,26 @@ class OsmController extends ActionController {
 			';
 		}
 
-		// Add marker
-		if ( $popupOptions > 0 ) {
-			$leafletScript .= '
-                 L.marker(window[\'coords_' . $cUid . '\']).addTo(window[\'map_' . $cUid . '\']).bindPopup(\'' . $popupContent . '\').openPopup();
-			';
-		}
+		// Add markers
+		$markers_data = array_map( function( Osm $map ) {
+			return '{ latlng: [' . $map->getLatitude() . ',' . $map->getLongitude() . '], '.
+				'popup: \'' . addslashes( $this->getPopupContent($map) ) . '\'' .
+				' }';
+		}, $markers );
+		$leafletScript .= '
+			var markers_' . $cUid . '_data = [' . join( ',', $markers_data ) . '],
+				group_' . $cUid . ' = new L.featureGroup([]),
+				marker, i = 0;
+			while (marker = markers_' . $cUid . '_data[i++]) {
+				group_' . $cUid . '.addLayer(new L.marker(marker.latlng)' .
+				( ( $popupOptions > 0 ) ? '.bindPopup(marker.popup)' : '' ) .
+				');
+			}
+
+			window[\'map_' . $cUid . '\']
+				.fitBounds(group_' . $cUid . '.getBounds(), {padding: [25,25], maxZoom: ' . $zoom . '})' .
+				( ( $popupOptions > 0 ) ? '.addLayer(group_' . $cUid . ')' : '') .
+				';';
 
 		// Add full screen button
 		if ( $displayFullScreenButton === '1' ) {
@@ -386,5 +379,25 @@ class OsmController extends ActionController {
 
 		$this->view->assign( 'cUid', $cUid );
 
+	}
+
+	/**
+	 * @param $map Osm
+	 * @return string
+	 */
+	private function getPopupContent( Osm $map ) {
+
+		if ( '0' === $this->settings['PopupOptions'] ) {
+			return '';
+		}
+
+		//Define popup content
+		$popupContent = $map->getTitle();
+
+		if( '2' === $this->settings['PopupOptions'] ) {
+			$popupContent .= '<br />' . nl2br( $map->getAddress() );
+		}
+
+		return trim( str_replace( array( "\n\r", "\n", "\r" ), '', $popupContent ) );
 	}
 }

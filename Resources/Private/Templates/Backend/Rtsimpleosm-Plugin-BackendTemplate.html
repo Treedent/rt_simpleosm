@@ -7,12 +7,17 @@
             <f:if condition="{flex.contents}">
                 <f:then>
                     <li class="list-group-item">
-                        <img src="{flex.contents.osm.icon}" alt="osm">&nbsp;
-                        <strong>{flex.contents.osm.title}</strong>&nbsp;
-                        [{flex.contents.osm.uid}]<br />
-                        <f:format.raw>{flex.contents.osm.address}</f:format.raw>
-                        <f:format.raw>{flex.contents.osm.latitude}</f:format.raw>
-                        <f:format.raw>{flex.contents.osm.longitude}</f:format.raw>
+                      <ul class="list-group">
+                        <f:for each="{flex.contents.markers}" as="osm">
+                          <li class="list-group-item">
+                            <img src="{osm.icon}" alt="osm">&nbsp;
+                            <strong>{osm.title}</strong>&nbsp;[{osm.uid}]<br />
+                            <f:format.raw>{osm.address}</f:format.raw>
+                            <f:format.raw>{osm.latitude}</f:format.raw>
+                            <f:format.raw>{osm.longitude}</f:format.raw>
+                          </li>
+                        </f:for>
+                      </ul>
                     </li>
                     <li class="list-group-item">
                         <f:image width="75" height="75" src="{flex.contents.mapStyleImg}" alt="map_style" /><br />
