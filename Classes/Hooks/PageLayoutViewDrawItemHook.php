@@ -94,14 +94,14 @@ class PageLayoutViewDrawItemHook implements PageLayoutViewDrawItemHookInterface 
 			//Get Map records
 			preg_match_all( '/tx_rtsimpleosm_domain_model_osm_(\d+),?/', $flexform['mapselection']['settings.MapRecord'], $mapRecords );
 			$mapRecordIds = array_map( 'intval', $mapRecords[1] );
-			$selectedOsms = [];
+			$selectedMarkers = [];
 
 			if ( version_compare( TYPO3_version, '8.0', '<' ) ) {
 				// Database connection
 				global $TYPO3_DB;
 				$fields       = "`uid`,`title`,`latitude`,`longitude`,`address`";
 				$where_clause = "`uid` IN (" . join( ', ', $mapRecordIds ) . ")";
-				$selectedOsms  = $TYPO3_DB->exec_SELECTgetRows( $fields, $this->osm_table, $where_clause );
+				$selectedMarkers  = $TYPO3_DB->exec_SELECTgetRows( $fields, $this->osm_table, $where_clause );
 
 			} elseif ( version_compare( TYPO3_version, '8.0', '>=' ) ) {
 				// Database connection
@@ -109,7 +109,7 @@ class PageLayoutViewDrawItemHook implements PageLayoutViewDrawItemHookInterface 
 				$pageQueryBuilder = $connectionPool->getQueryBuilderForTable( $this->osm_table );
 
 				// Get OSM infos
-				$selectedOsms = $pageQueryBuilder
+				$selectedMarkers = $pageQueryBuilder
 					->select( 'uid', 'title', 'latitude', 'longitude', 'address' )
 					->from( $this->osm_table )
 					->where(
@@ -119,18 +119,18 @@ class PageLayoutViewDrawItemHook implements PageLayoutViewDrawItemHookInterface 
 					->fetchAll();
 			}
 
-			$osms = [];
-			foreach ( $selectedOsms as $selectedOsm ) {
-				$osms[] = [
+			$markers = [];
+			foreach ( $selectedMarkers as $selectedMarker ) {
+				$markers[] = [
 					'icon' => '../typo3conf/ext/rt_simpleosm/Resources/Public/Icons/user_plugin_sosm.svg',
-					'uid' => $selectedOsm['uid'],
-					'title' => $selectedOsm['title'],
-					'latitude' => '<strong><em>' . LocalizationUtility::translate('LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.latitude', 'rt_simpleosm') . '</em></strong>: ' . $selectedOsm['latitude'] . '.<br />',
-					'longitude' => '<strong><em>' . LocalizationUtility::translate('LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.longitude', 'rt_simpleosm') . '</em></strong>: ' . $selectedOsm['longitude'] . '.<br />',
-					'address' => '<strong><em>' . LocalizationUtility::translate('LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.address', 'rt_simpleosm') . '</em></strong>: ' . $selectedOsm['address'] . '.<br />',
+					'uid' => $selectedMarker['uid'],
+					'title' => $selectedMarker['title'],
+					'latitude' => '<strong><em>' . LocalizationUtility::translate('LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.latitude', 'rt_simpleosm') . '</em></strong>: ' . $selectedMarker['latitude'] . '.<br />',
+					'longitude' => '<strong><em>' . LocalizationUtility::translate('LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.longitude', 'rt_simpleosm') . '</em></strong>: ' . $selectedMarker['longitude'] . '.<br />',
+					'address' => '<strong><em>' . LocalizationUtility::translate('LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rtsimpleosm_domain_model_osm.address', 'rt_simpleosm') . '</em></strong>: ' . $selectedMarker['address'] . '.<br />',
 				];
 			}
-			$flex['contents']['markers'] = $osms;
+			$flex['contents']['markers'] = $markers;
 		}
 
 		if ( !empty( $flexform['styling']['settings.MapStyle'] || $flexform['styling']['settings.MapStyle'] === '0') ) {
