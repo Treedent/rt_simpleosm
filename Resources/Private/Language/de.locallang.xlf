@@ -39,6 +39,10 @@
 				<source>Exit Fullscreen</source>
 				<target>Beenden Sie den Vollbildmodus</target>
 			</trans-unit>
+			<trans-unit id="map.label.noValidMapRecordSelected">
+				<source><![CDATA[If you don't know where to go, I can not guess for you!<br />Please select a valid published map record in plugin configuration!]]></source>
+				<target><![CDATA[Wenn Sie nicht wissen, wohin Sie gehen sollen, kann ich nicht für Sie raten!<br />Bitte wählen Sie einen gültigen veröffentlichten Kartendatensatz in der Plugin-Konfiguration!]]></target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

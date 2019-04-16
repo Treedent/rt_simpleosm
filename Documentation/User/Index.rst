@@ -20,9 +20,10 @@ To display an OpenStreetMap on your page, you have to follow 2 steps:
 you will have to enter for one map
 
     - The title,
-    - The adress,
+    - The address,
     - The latitude,
-    - The longitude.
+    - The longitude,
+    - A custom marker.
 
 .. tip::
 
@@ -38,14 +39,14 @@ You don't really need to create a Folder page for this. You can store this recor
    :width: 297px
    :alt: Insert an OSM record
 
-   Insert a new OSM record.
+   Inserting a new OSM record.
 
 
 .. figure:: ../Images/UserManual/be_enter_map_infos.png
-   :width: 696px
+   :width: 711px
    :alt: Configure an OSM record
 
-   Configure an OSM record.
+   Configuring an OSM record.
 
 
 
@@ -54,26 +55,28 @@ You don't really need to create a Folder page for this. You can store this recor
 you will have to configure the desired map by specifing:
 
     - A header for the plugin,
-    - The OSM record for the desired map,
+    - The OSM record or tt_address record for the desired map,
     - The map style, width, height and border radius,
     - The map zoom factor,
     - The map popup options,
-    - The map zoom, mouse and fullscreen options.
+    - The map zoom, mouse and fullscreen options,
+    - The navigational mini map display,
+    - The external caption menu display.
 
 
 .. figure:: ../Images/UserManual/be_insert_plugin.png
    :width: 819px
    :alt: Insert an OSM plugin
 
-   Insert an OSM plugin.
+   Inserting an OSM plugin.
 
 
 
 .. figure:: ../Images/UserManual/be_select_map.png
-   :width: 765px
+   :width: 552px
    :alt: Select a map record
 
-   OSM plugin: selecting a map record.
+   OSM plugin: selecting an Osm record or a tt_address record.
 
 
 
@@ -86,7 +89,7 @@ you will have to configure the desired map by specifing:
 
 
 .. figure:: ../Images/UserManual/be_other_options.png
-   :width: 776px
+   :width: 684px
    :alt: Configure map options
 
    OSM plugin: Configuring map options.
@@ -94,10 +97,18 @@ you will have to configure the desired map by specifing:
 
 
 .. figure:: ../Images/UserManual/be_plugin.png
-   :width: 511px
+   :width: 497px
    :alt: OSM Plugin appearance in Page module
 
    OSM plugin: Appearance in Page module.
+
+
+
+.. figure:: ../Images/UserManual/fe_caption_menu.png
+   :width: 838px
+   :alt: OSM Plugin rendering with navigational mini map and external caption menu
+
+   OSM plugin: Rendering with navigational mini map and external caption menu.
 
 
 

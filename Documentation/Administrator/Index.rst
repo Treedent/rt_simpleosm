@@ -22,8 +22,8 @@ Here, you can configure :
 
     - The backend plugin interface background image,
     - The backend plugin interface background color,
-    - Chosing between image or color for the backend plugin interface.
-    - Chosing to download Leaflet Library and plugins (JavaScript and CSS) from popular Content Delivery Network (Faster).
+    - Choosing between image or color for the backend plugin interface.
+    - Choosing to download Leaflet library and plugins (JavaScript and CSS) from popular Content Delivery Network (Faster).
 
 
 

@@ -15,10 +15,9 @@
                             <type>group</type>
                             <internal_type>db</internal_type>
                             <allowed>tx_rtsimpleosm_domain_model_osm</allowed>
-                            <size>1</size>
+                            <size>10</size>
 							<minitems>1</minitems>
-							<maxitems>1</maxitems>
-							<eval>required</eval>
+							<maxitems>20</maxitems>
                         </config>
 					</settings.MapRecord>
 
@@ -204,8 +203,12 @@
 									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions.2</numIndex>
 									<numIndex index="1">2</numIndex>
 								</numIndex>
+								<numIndex index="3">
+									<numIndex index="0">LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.popupOptions.3</numIndex>
+									<numIndex index="1">3</numIndex>
+								</numIndex>
 							</items>
-							<default>0</default>
+							<default>3</default>
 						</config>
 					</settings.PopupOptions>
 
@@ -235,6 +238,24 @@
 							<default>1</default>
 						</config>
 					</settings.DisplayFullScreenButton>
+
+					<settings.DisplayMiniMap>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayMiniMap</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.DisplayMiniMap>
+
+					<settings.DisplayCaptionMenu>
+						<exclude>0</exclude>
+						<label>LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_db.xlf:tx_rt_simpleosm_sosm.displayCaptionMenu</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</settings.DisplayCaptionMenu>
 
 				</el>
 			</ROOT>

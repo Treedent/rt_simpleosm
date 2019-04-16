@@ -26,7 +26,7 @@ Simple OpenStreetMap
 		Insert a simple OpenStreetMap. No API key required!
 
 	:Keywords:
-		OpenStreetMap,leaflet,fullscreen,open,street,map
+		OpenStreetMap,leaflet,fullscreen,minimap,open,street,map
 
 	:Copyright:
 		2019

@@ -10,6 +10,8 @@ CREATE TABLE tx_rtsimpleosm_domain_model_osm (
 	address text,
 	latitude varchar(255) DEFAULT '' NOT NULL,
 	longitude varchar(255) DEFAULT '' NOT NULL,
+	markericon smallint(3) unsigned DEFAULT '0' NOT NULL,
+	mapmarkeruid varchar(9) DEFAULT '' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -39,4 +41,11 @@ CREATE TABLE tx_rtsimpleosm_domain_model_osm (
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
 	KEY language (l10n_parent,sys_language_uid)
 
+);
+
+#
+# Table structure for table 'tt_address'
+#
+CREATE TABLE tt_address (
+	markericon smallint(3) unsigned DEFAULT '0' NOT NULL
 );

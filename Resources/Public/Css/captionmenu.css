@@ -1,0 +1,24 @@
+ul.mapCaptionMenu {
+    list-style-type: none;
+    border:1px solid #ccc;
+    background-color: #eee;
+    border-radius:3px;
+    width:auto;
+    display: table;
+    padding:10px
+}
+ul.mapCaptionMenu li {
+    line-height: 30px
+}
+ul.mapCaptionMenu li span.link {
+    text-decoration: none;
+    cursor:pointer
+}
+ul.mapCaptionMenu li span.link:hover {
+    text-decoration: underline
+}
+img.markerIcon {
+    width:15px;
+    height:24px;
+    vertical-align:middle
+}

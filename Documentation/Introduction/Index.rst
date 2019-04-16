@@ -27,11 +27,15 @@ Some various options are available such as:
     - Map fullscreen button,
     - Map popup options,
     - Map zoom factor,
-    - Map zoom on mouse wheel scroll.
+    - Multiple map custom markers,
+    - Map zoom on mouse wheel scroll,
+    - Mini-map on bottom right corner,
+    - External map caption menu,
+    - Support for tt_address records.
 
 With OpenStreetMap and leaflet map tiles providers included in this extension, you don't need any API key.
 
-This extension is provided with English, French, German, Italian and Spanish translation.
+This extension is provided with English, French, German, Italian and Spanish translations.
 
 Thanks to Michael Lang for German translation.
 

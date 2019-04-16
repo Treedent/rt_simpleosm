@@ -37,7 +37,7 @@
 				<source>About</source>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapRecord">
-				<source>Map record</source>
+				<source>Map record(s)</source>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.mapWidth">
 				<source>Map width</source>
@@ -105,6 +105,12 @@
 			<trans-unit id="tx_rt_simpleosm_sosm.displayFullScreenButton">
 				<source>Display fullscreen button</source>
 			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.displayMiniMap">
+				<source>Display navigational mini map</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.displayCaptionMenu">
+				<source>Add an external caption menu below the map</source>
+			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.borderRadiusMap">
 				<source>Map border radius</source>
 			</trans-unit>
@@ -115,10 +121,73 @@
 				<source>No marker and no popup</source>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.1">
-				<source>Popup with title</source>
+				<source>Marker alone without popup</source>
 			</trans-unit>
 			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.2">
+				<source>Popup with title</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.3">
 				<source>Popup with title and address</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon">
+				<source>Marker icon</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.0">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.1">
+				<source>Black marker</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.2">
+				<source>Blue marker</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.3">
+				<source>Deep blue marker</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.4">
+				<source>Green marker</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.5">
+				<source>Fuchsia marker</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.6">
+				<source>Orange marker</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.7">
+				<source>Purple marker</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.8">
+				<source>Red marker</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.9">
+				<source>Yellow marker</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.10">
+				<source>Black pin</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.11">
+				<source>Blue pin</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.12">
+				<source>Deep blue pin</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.13">
+				<source>Green pin</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.14">
+				<source>Fuchsia pin</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.15">
+				<source>Orange pin</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.16">
+				<source>Purple pin</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.17">
+				<source>Red pin</source>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.18">
+				<source>Yellow pin</source>
 			</trans-unit>
 		</body>
 	</file>

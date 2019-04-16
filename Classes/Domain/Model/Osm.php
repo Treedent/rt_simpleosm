@@ -13,10 +13,12 @@ namespace CMSPACA\RtSimpleosm\Domain\Model;
  *
  ***/
 
+use \TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+
 /**
  * Osm
  */
-class Osm extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Osm extends AbstractEntity {
 	/**
 	 * Map title
 	 *
@@ -47,6 +49,20 @@ class Osm extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var string
 	 */
 	protected $address = '';
+
+	/**
+	 * Marker icon
+	 *
+	 * @var integer
+	 */
+	protected $markericon = 0;
+
+	/**
+	 * Map Marker Unic Id
+	 *
+	 * @var string
+	 */
+	 protected $mapmarkeruid = '';
 
 	/**
 	 * Returns the title
@@ -126,5 +142,56 @@ class Osm extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setAddress( $address ) {
 		$this->address = $address;
+	}
+
+	/**
+	 * Sets the uid
+	 *
+	 * @param int $uid
+	 *
+	 * @return void
+	 */
+	public function setUid( $uid ) {
+		$this->uid = $uid;
+	}
+	
+	/**
+	 * Returns the marker icon
+	 *
+	 * @return integer $markericon
+	 */
+	public function getMarkericon() {
+		return $this->markericon;
+	}
+
+	/**
+	 * Sets the marker icon
+	 *
+	 * @param integer $markericon
+	 *
+	 * @return void
+	 */
+	public function setMarkericon( $markericon ) {
+		$this->markericon = $markericon;
+	}
+
+	/**
+	 * Returns the map marker unic id
+	 *
+	 * @return string $mapmarkeruid
+	 */
+	public function getMapmarkeruid() {
+		return $this->mapmarkeruid;
+	}
+
+	/**
+	 * Sets the map marker unic id
+	 *
+	 * @param string $mapmarkeruid
+	 *
+	 * @return void
+	 */
+	public function setMapmarkeruid( $mapmarkeruid ) {
+		$this->mapmarkeruid = $mapmarkeruid;
 	}
 }

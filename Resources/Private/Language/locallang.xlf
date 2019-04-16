@@ -30,6 +30,9 @@
 			<trans-unit id="map.label.exitFullscreen">
 				<source>Exit Fullscreen</source>
 			</trans-unit>
+			<trans-unit id="map.label.noValidMapRecordSelected">
+				<source><![CDATA[If you don't know where to go, I can not guess for you!<br />Please select a valid and published map record in plugin configuration!]]></source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

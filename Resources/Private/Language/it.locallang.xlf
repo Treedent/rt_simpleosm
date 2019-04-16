@@ -39,6 +39,10 @@
 				<source>Exit Fullscreen</source>
 				<target>Esci dalla modalità schermo intero</target>
 			</trans-unit>
+			<trans-unit id="map.label.noValidMapRecordSelected">
+				<source><![CDATA[If you don't know where to go, I can not guess for you!<br />Please select a valid published map record in plugin configuration!]]></source>
+				<target><![CDATA[Se non sai dove andare, non posso indovinarlo per te! <br /> Seleziona un record valido e pubblicato nella configurazione del plugin!]]></target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
