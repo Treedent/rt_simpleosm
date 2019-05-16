@@ -11,6 +11,13 @@
 ChangeLog
 =========
 
+2019-05-16 : Upload of version 2.0.1
+
+    - Bug correction : Skip rendering of the map if settings are not provided. Thanks to (YKWeyer).
+    - Update of composer.json
+    - Add Dutch translations.
+
+
 2019-04-16 : Upload of version 2.0.0.
 
     Update note from version 1.X :

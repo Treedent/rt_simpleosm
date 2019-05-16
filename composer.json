@@ -1,23 +1,36 @@
 {
-    "name": "cmspaca/rt-simpleosm",
+    "name": "rt_simpleosm",
     "type": "typo3-cms-extension",
     "description": "Insert a simple OpenStreetMap. No API key required!",
+    "keywords": [
+        "OpenStreetMap", "leaflet", "fullscreen", "minimap", "open", "street", "map"
+    ],
     "authors": [
         {
             "name": "Regis TEDONE",
+            "email": "regis.tedone@gmail.com",
             "role": "Developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/Treedent/rt_simpleosm/issues"
+    },
+    "license": ["GPL-2.0"],
     "require": {
-        "typo3/cms-core": "^7.6 || ^8.7 || ^9.5"
+        "typo3/cms-core": "7.6.0-9.5.99"
     },
     "autoload": {
         "psr-4": {
-            "CMSPACA\\RtSimpleosm\\": "Classes"
+            "CMSPACA\\RtSimpleosm\\": "Classes/"
         }
     },
     "replace": {
         "rt_simpleosm": "self.version",
-        "typo3-ter/rt-simpleosm": "self.version"
+        "cmspaca/rt-simpleosm": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "rt_simpleosm"
+        }
     }
 }

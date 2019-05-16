@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="NL" datatype="plaintext" original="messages" date="2019-03-01T19:31:10Z" product-name="rt_simpleosm">
+		<header/>
+		<body>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm">
+				<source>Osm</source>
+				<target>Osm</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.title">
+				<source>Map title</source>
+				<target>Kaart titel</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.address">
+				<source>Map address</source>
+				<target>Kaart adres</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.latitude">
+				<source>Map latitude</source>
+				<target>Breedtegraad kaart</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.longitude">
+				<source>Map longitude</source>
+				<target>Lengtegraad kaart</target>
+			</trans-unit>
+			<trans-unit id="map.label.zoomIn">
+				<source>Zoom in</source>
+				<target>Inzoomen</target>
+			</trans-unit>
+			<trans-unit id="map.label.zoomOut">
+				<source>Zoom out</source>
+				<target>Uitzoomen</target>
+			</trans-unit>
+			<trans-unit id="map.label.viewFullscreen">
+				<source>View Fullscreen</source>
+				<target>Volledig scherm weergeven</target>
+			</trans-unit>
+			<trans-unit id="map.label.exitFullscreen">
+				<source>Exit Fullscreen</source>
+				<target>Verlaat volledig scherm</target>
+			</trans-unit>
+			<trans-unit id="map.label.noValidMapRecordSelected">
+				<source><![CDATA[If you don't know where to go, I can not guess for you!<br />Please select a valid and published map record in plugin configuration!]]></source>
+				<target><![CDATA[Als je niet weet waar je heen moet, kan ik niet voor je raden!<br />Selecteer een geldig en gepubliceerd kaartrecord in de plug-inconfiguratie!]]></target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

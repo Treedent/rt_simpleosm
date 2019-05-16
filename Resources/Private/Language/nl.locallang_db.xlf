@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="nl" datatype="plaintext" original="messages" date="2019-03-01T19:31:10Z" product-name="rt_simpleosm">
+		<header/>
+		<body>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm">
+				<source>Osm</source>
+				<target>Osm</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.address">
+				<source>Address</source>
+				<target>Adres</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.latitude">
+				<source>Map latitude</source>
+				<target>Breedtegraad kaart</target>
+			</trans-unit>
+			<trans-unit id="tx_rtsimpleosm_domain_model_osm.longitude">
+				<source>Map longitude</source>
+				<target>Lengtegraad kaart</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.name">
+				<source>Simple OpenStreetMap</source>
+				<target>Simple OpenStreetMap</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.description">
+				<source>Insert a simple OpenStreetMap.</source>
+				<target>Voeg een eenvoudige OpenStreetMap in.</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.sheet.mapSelection">
+				<source>Map selection</source>
+				<target>Kaart selectie</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.sheet.styling">
+				<source>Style</source>
+				<target>Stijl</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.sheet.options">
+				<source>Options</source>
+				<target>Opties</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.sheet.about">
+				<source>About</source>
+				<target>Wat betreft</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapRecord">
+				<source>Map record(s)</source>
+				<target>Kaartrecord(en)</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapWidth">
+				<source>Map width</source>
+				<target>Kaartbreedte</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapHeight">
+				<source>Map height</source>
+				<target>Kaartbreedte</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle">
+				<source>Map style</source>
+				<target>Kaartstijl</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.0">
+				<source>OpenStreetMap Mapnik</source>
+				<target>OpenStreetMap Mapnik</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.1">
+				<source>OpenStreetMap black and white</source>
+				<target>OpenStreetMap zwart en wit</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.2">
+				<source>OpenStreetMap hot</source>
+				<target>OpenStreetMap hot</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.3">
+				<source>Stamen Design toner lite</source>
+				<target>Stamen Design toner lite</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.4">
+				<source>Stamen Design terrain</source>
+				<target>Stamen Design terrein</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.5">
+				<source>Stamen Design watercolor + Hydda roads and labels</source>
+				<target>Stamen Design watercolor + Hydda wegen en labels</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.6">
+				<source>MTB Map (Europe only)</source>
+				<target>MTB-kaart (alleen Europa)</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.7">
+				<source>ESRI World Street Map</source>
+				<target>ESRI World Street Map</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.8">
+				<source>CartoDB Positron</source>
+				<target>CartoDB Positron</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.9">
+				<source>Hydda full Map</source>
+				<target>Hydda volledige kaart</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.10">
+				<source>ESRI World Imagery + Stamen labels</source>
+				<target>ESRI World Imagery + Stamen labels</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.11">
+				<source>OpenStreetMap Germany</source>
+				<target>OpenStreetMap Duitsland</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.12">
+				<source>OpenStreetMap France</source>
+				<target>OpenStreetMap Frankrijk</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.13">
+				<source>OpenTopoMap</source>
+				<target>OpenTopoMap</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.mapStyle.14">
+				<source>OpenMapSurfer Roads</source>
+				<target>OpenMapSurfer Wegen</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.zoom">
+				<source>Map zoom factor</source>
+				<target>Zoomfactor kaart</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.scrollWheelZoom">
+				<source>Zoom on mouse wheel scroll</source>
+				<target>Zoom op muiswiel scrollen</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.displayZoomButtons">
+				<source>Display zoom buttons</source>
+				<target>Zoomtoetsen weergeven</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.displayFullScreenButton">
+				<source>Display fullscreen button</source>
+				<target>Schermvullende knop weergeven</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.displayMiniMap">
+				<source>Display navigational mini map</source>
+				<target>Mini-navigatiekaart weergeven</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.displayCaptionMenu">
+				<source>Add an external caption menu below the map</source>
+				<target>Voeg een extern bijschriftmenu toe onder de kaart</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.borderRadiusMap">
+				<source>Map border radius</source>
+				<target>Randradius kaart</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions">
+				<source>Map popup options</source>
+				<target>Kaart popup-opties</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.0">
+				<source>No marker and no popup</source>
+				<target>Geen marker en geen popup</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.1">
+				<source>Marker alone without popup</source>
+				<target>Marker alleen zonder popup</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.2">
+				<source>Popup with title</source>
+				<target>Popup met titel</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.popupOptions.3">
+				<source>Popup with title and address</source>
+				<target>Popup met titel en adres</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon">
+				<source>Marker icon</source>
+				<target>Markeringspictogram</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.0">
+				<source>Default</source>
+				<target>Standaard</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.1">
+				<source>Black marker</source>
+				<target>Zwarte markering</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.2">
+				<source>Blue marker</source>
+				<target>Blauw markering</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.3">
+				<source>Deep blue marker</source>
+				<target>Diepblauw markering</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.4">
+				<source>Green marker</source>
+				<target>Groen markering</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.5">
+				<source>Fuchsia marker</source>
+				<target>Fuchsia markering</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.6">
+				<source>Orange marker</source>
+				<target>Oranje markering</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.7">
+				<source>Purple marker</source>
+				<target>Purper markering</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.8">
+				<source>Red marker</source>
+				<target>Rood markering</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.9">
+				<source>Yellow marker</source>
+				<target>Geel markering</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.10">
+				<source>Black pin</source>
+				<target>Zwarte pin</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.11">
+				<source>Blue pin</source>
+				<target>Blauw pin</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.12">
+				<source>Deep blue pin</source>
+				<target>Diepblauw pin</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.13">
+				<source>Green pin</source>
+				<target>Groen pin</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.14">
+				<source>Fuchsia pin</source>
+				<target>Fuchsia pin</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.15">
+				<source>Orange pin</source>
+				<target>Oranje pin</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.16">
+				<source>Purple pin</source>
+				<target>Purper pin</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.17">
+				<source>Red pin</source>
+				<target>Rood pin</target>
+			</trans-unit>
+			<trans-unit id="tx_rt_simpleosm_sosm.markerIcon.18">
+				<source>Yellow pin</source>
+				<target>Geel pin</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

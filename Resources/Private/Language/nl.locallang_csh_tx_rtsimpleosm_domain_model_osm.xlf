@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="nl" datatype="plaintext" original="messages" date="2019-03-01T19:31:10Z" product-name="rt_simpleosm">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>Map title</source>
+				<target>Kaart titel</target>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>Map address</source>
+				<target>Kaart adres</target>
+			</trans-unit>
+			<trans-unit id="latitude.description">
+				<source>Map latitude</source>
+				<target>Breedtegraad kaart</target>
+			</trans-unit>
+			<trans-unit id="longitude.description">
+				<source>Map longitude</source>
+				<target>Lengtegraad kaart</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

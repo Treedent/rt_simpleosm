@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="nl" datatype="plaintext" original="messages" date="2019-03-04T12:34:40Z" product-name="rt_simpleosm">
+        <header/>
+        <body>
+            <trans-unit id="simpleosm.extmng.backendPluginInterfaceBackgroundImage">
+                <source>Background image : The backend plugin interface background image.</source>
+                <target>Achtergrondafbeelding: de back-end-plugin-interface achtergrondafbeelding.</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.extmng.backendPluginInterfaceBackgroundColor">
+                <source>Background color : The backend plugin interface background color.</source>
+                <target>Achtergrondkleur: de achtergrondkleur van de back-endplugin-interface.</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.extmng.backendPluginInterfaceBackground">
+                <source>Use color : Use color instead of image as backend plugin interface background.</source>
+                <target>Gebruik kleur: gebruik de kleur in plaats van de afbeelding als achtergrond voor de backend-plug-in interface.</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.extmng.useCdn">
+                <source>Use CDN : Leaflet Library and plugins (JavaScript and CSS) will be downloaded from popular Content Delivery Network (Faster).</source>
+                <target>Gebruik CDN: Leaflet Library en plug-ins (JavaScript en CSS) worden gedownload van het populaire Content Delivery Network (sneller).</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.noHeaderFound">
+                <source>No header found</source>
+                <target>Geen header gevonden</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.0">
+                <source>(Title default level)</source>
+                <target>(Titel standaardniveau)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.1">
+                <source>(Title level 1)</source>
+                <target>(Titel niveau 1)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.2">
+                <source>(Title level 2)</source>
+                <target>(Titel niveau 2)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.3">
+                <source>(Title level 3)</source>
+                <target>(Titel niveau 3)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.4">
+                <source>(Title level 4)</source>
+                <target>(Titel niveau 4)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.5">
+                <source>(Title level 5)</source>
+                <target>(Titel niveau 5)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.backend.headerLayout.100">
+                <source>(Hidden title)</source>
+                <target>(Verborgen titel)</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.message.selectAMapRecord">
+                <source>Please select a map record.</source>
+                <target>Selecteer een kaartrecord.</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.message.getLatLong.title">
+                <source>Visit this url to find coordinates from an address:</source>
+                <target>Ga naar deze URL om coördinaten van een adres te vinden:</target>
+            </trans-unit>
+            <trans-unit id="simpleosm.message.getLatLong.text">
+                <source>Get Latitude and Longitude from an address: https://www.latlong.net.</source>
+                <target>Haal latitude en lengtegraad op vanaf een adres: https://www.latlong.net.</target>
+            </trans-unit>
+            <trans-unit id="about.CMSPACA.title">
+                <source>About CMS-PACA</source>
+                <target>Over CMS-PACA</target>
+            </trans-unit>
+            <trans-unit id="about.CMSPACA.text">
+                <source>Development of functional and custom TYPO3 extensions since 2004.</source>
+                <target>Ontwikkeling van functionele en aangepaste TYPO3-uitbreidingen sinds 2004.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
