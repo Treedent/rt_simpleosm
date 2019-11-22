@@ -18,6 +18,7 @@
                             <size>10</size>
 							<minitems>1</minitems>
 							<maxitems>20</maxitems>
+				<prepend_tname>1</prepend_tname>
                         </config>
 					</settings.MapRecord>
 
