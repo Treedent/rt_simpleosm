@@ -17,6 +17,10 @@ Some various options are available such as:
     - External map caption menu,
     - Support for tt_address records.
 
+
+![Simple OpenStreetMap](https://github.com/Treedent/rt_simpleosm/blob/master/Documentation/Images/Simple_OpenStreetMap.png?raw=true)
+
+
 With OpenStreetMap and leaflet map tiles providers included in this extension, you don't need any API key.
 
-This extension is provided with English, French, German, Italian and Spanish translations.
+This extension comes with translations in English, French, German, Dutch, Italian and Spanish.
