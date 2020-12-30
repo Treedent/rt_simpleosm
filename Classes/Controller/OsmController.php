@@ -1,6 +1,6 @@
 <?php
 
-namespace CMSPACA\RtSimpleosm\Controller;
+namespace SYRADEV\RtSimpleosm\Controller;
 
 /***
  *
@@ -9,17 +9,17 @@ namespace CMSPACA\RtSimpleosm\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2019 Regis TEDONE <regis.tedone@gmail.com>, CMS-PACA
+ *  (c) 2021 Regis TEDONE <regis.tedone@gmail.com>, SYRADEV
  *
  ***/
 
-use CMSPACA\RtSimpleosm\Domain\Model\Osm;
+use SYRADEV\RtSimpleosm\Domain\Model\Osm;
 use TYPO3\CMS\Core\Utility\PathUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
-use CMSPACA\RtSimpleosm\Domain\Repository\OsmRepository;
+use SYRADEV\RtSimpleosm\Domain\Repository\OsmRepository;
 
 /**
  * OsmController
@@ -232,7 +232,7 @@ class OsmController extends ActionController {
 			}
 
 			$mapConf = '{
-	            zoomControl: false,     
+	            zoomControl: false,   
 	            minZoom: ' . $minZoom . ',
 	            maxZoom: ' . $maxZoom . ',
 	            animate: true,
@@ -251,7 +251,7 @@ class OsmController extends ActionController {
 			// Inject leaflet CSS
 			if ( $extConf['useCdn'] === '1' ) {
 				$this->pageRenderer->addCssLibrary(
-					'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css',
+					'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css',
 					'stylesheet',
 					'all',
 					'LeafletCss', /* title */
@@ -321,7 +321,7 @@ class OsmController extends ActionController {
 			if ( $extConf['useCdn'] === '1' ) {
 				$this->pageRenderer->addJsFooterLibrary(
 					'leafletJS', /* name */
-					'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js',
+					'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js',
 					'text/javascript', /* type */
 					false, /* compress*/
 					true, /* force on top */

@@ -56,18 +56,22 @@
                 <target>Veuillez sélectionner un enregistrement de carte.</target>
             </trans-unit>
             <trans-unit id="simpleosm.message.getLatLong.title">
-                <source>Visit this url to find coordinates from an address:</source>
-                <target>Visitez cette url pour trouver les coodonnées d'une adresse :</target>
+                <source>Visit one of these urls to find coordinates from an address:</source>
+                <target>Visitez une de ces urls pour trouver les coodonnées d'une adresse :</target>
             </trans-unit>
             <trans-unit id="simpleosm.message.getLatLong.text">
                 <source>Get Latitude and Longitude from an address: https://www.latlong.net.</source>
                 <target>Obtenir la latitude et la longitude depuis une adresse : https://www.latlong.net.</target>
             </trans-unit>
-            <trans-unit id="about.CMSPACA.title">
-                <source>About CMS-PACA</source>
-                <target>A propos de CMS-PACA</target>
+            <trans-unit id="simpleosm.message.getLatLong2.text">
+                <source>Get Latitude and Longitude from an address: https://www.gps-coordinates.net.</source>
+                <target>Obtenir la latitude et la longitude depuis une adresse : https://www.gps-coordinates.net.</target>
             </trans-unit>
-            <trans-unit id="about.CMSPACA.text">
+            <trans-unit id="about.SYRADEV.title">
+                <source>About SYRADEV</source>
+                <target>A propos de SYRADEV</target>
+            </trans-unit>
+            <trans-unit id="about.SYRADEV.text">
                 <source>Development of functional and custom TYPO3 extensions since 2004.</source>
                 <target>Développement d'extensions TYPO3 fonctionnelles et sur mesure depuis 2004.</target>
             </trans-unit>

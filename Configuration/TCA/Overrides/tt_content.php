@@ -3,7 +3,7 @@ defined('TYPO3_MODE') || die();
 
 // Register plugin
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'CMSPACA.RtSimpleosm',
+	'SYRADEV.RtSimpleosm',
 	'Sosm',
 	'Simple OSM'
 );

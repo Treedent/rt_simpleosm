@@ -1,6 +1,6 @@
 <?php
 
-namespace CMSPACA\RtSimpleosm\Domain\Model;
+namespace SYRADEV\RtSimpleosm\Domain\Model;
 
 /***
  *
@@ -9,7 +9,7 @@ namespace CMSPACA\RtSimpleosm\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2019 Regis TEDONE <regis.tedone@gmail.com>, CMS-PACA
+ *  (c) 2021 Regis TEDONE <regis.tedone@gmail.com>, SYRADEV
  *
  ***/
 
@@ -23,7 +23,6 @@ class Osm extends AbstractEntity {
 	 * Map title
 	 *
 	 * @var string
-	 * @validate NotEmpty
 	 */
 	protected $title = '';
 
@@ -31,7 +30,6 @@ class Osm extends AbstractEntity {
 	 * Map latitude
 	 *
 	 * @var string
-	 * @validate NotEmpty
 	 */
 	protected $latitude = '';
 
@@ -39,7 +37,6 @@ class Osm extends AbstractEntity {
 	 * Map longitude
 	 *
 	 * @var string
-	 * @validate NotEmpty
 	 */
 	protected $longitude = '';
 

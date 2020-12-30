@@ -43,15 +43,18 @@
                 <source>Please select a map record.</source>
             </trans-unit>
             <trans-unit id="simpleosm.message.getLatLong.title">
-                <source>Visit this url to find coordinates from an address:</source>
+                <source>Visit one of these urls to find coordinates from an address:</source>
             </trans-unit>
             <trans-unit id="simpleosm.message.getLatLong.text">
                 <source>Get Latitude and Longitude from an address: https://www.latlong.net.</source>
             </trans-unit>
-            <trans-unit id="about.CMSPACA.title">
-                <source>About CMS-PACA</source>
+            <trans-unit id="simpleosm.message.getLatLong2.text">
+                <source>Get Latitude and Longitude from an address: https://www.gps-coordinates.net.</source>
             </trans-unit>
-            <trans-unit id="about.CMSPACA.text">
+            <trans-unit id="about.SYRADEV.title">
+                <source>About SYRADEV</source>
+            </trans-unit>
+            <trans-unit id="about.SYRADEV.text">
                 <source>Development of functional and custom TYPO3 extensions since 2004.</source>
             </trans-unit>
         </body>

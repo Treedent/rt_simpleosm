@@ -56,18 +56,22 @@
                 <target>Si prega di selezionare un record della mappa.</target>
             </trans-unit>
             <trans-unit id="simpleosm.message.getLatLong.title">
-                <source>Visit this url to find coordinates from an address:</source>
-                <target>Visita questo URL per trovare le coordinate da un indirizzo :</target>
+                <source>Visit one of these urls to find coordinates from an address:</source>
+                <target>Visita uno di questi URLi per trovare le coordinate da un indirizzo :</target>
             </trans-unit>
             <trans-unit id="simpleosm.message.getLatLong.text">
                 <source>Get Latitude and Longitude from an address: https://www.latlong.net.</source>
                 <target>Ottieni latitudine e longitudine da un indirizzo: https://www.latlong.net.</target>
             </trans-unit>
-            <trans-unit id="about.CMSPACA.title">
-                <source>About CMS-PACA</source>
-                <target>Informazioni su CMS-PACA</target>
+            <trans-unit id="simpleosm.message.getLatLong2.text">
+                <source>Get Latitude and Longitude from an address: https://www.gps-coordinates.net.</source>
+                <target>Ottieni latitudine e longitudine da un indirizzo: https://www.gps-coordinates.net.</target>
             </trans-unit>
-            <trans-unit id="about.CMSPACA.text">
+            <trans-unit id="about.SYRADEV.title">
+                <source>About SYRADEV</source>
+                <target>Informazioni su SYRADEV</target>
+            </trans-unit>
+            <trans-unit id="about.SYRADEV.text">
                 <source>Development of functional and custom TYPO3 extensions since 2004.</source>
                 <target>Sviluppo di estensioni TYPO3 funzionali e personalizzate dal 2004.</target>
             </trans-unit>

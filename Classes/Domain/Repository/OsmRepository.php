@@ -1,16 +1,16 @@
 <?php
 
-namespace CMSPACA\RtSimpleosm\Domain\Repository;
+namespace SYRADEV\RtSimpleosm\Domain\Repository;
 
 use TYPO3\CMS\Extbase\Persistence\Repository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use CMSPACA\RtSimpleosm\Domain\Model\Osm;
+use SYRADEV\RtSimpleosm\Domain\Model\Osm;
 
 /***************************************************************
  *
  *  Copyright notice
  *
- *  (c) 2019 Regis TEDONE <regis.tedone@gmail.com>, CMS-PACA
+ *  (c) 2021 Regis TEDONE <regis.tedone@gmail.com>, SYRADEV
  *
  *  All rights reserved
  *

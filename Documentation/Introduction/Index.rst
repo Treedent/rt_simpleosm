@@ -53,6 +53,6 @@ Screenshots
 
 
 
-.. figure:: ../Images/cms-paca.png
+.. figure:: ../Images/syradev.png
    :width: 120px
-   :alt: Made by CMS-PACA
+   :alt: Made by SYRADEV

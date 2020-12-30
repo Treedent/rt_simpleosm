@@ -138,7 +138,7 @@ return [
 	        'label' => 'LLL:EXT:rt_simpleosm/Resources/Private/Language/locallang_be.xlf:simpleosm.message.getLatLong.title',
 	        'config' => [
 		        'type' => 'user',
-		        'userFunc' => 'CMSPACA\\RtSimpleosm\\Userfuncs\\Tca->helperField',
+                'renderType' => 'rtGPSCoordinates',
 		        'parameters' => [
 			        'color' => '#9ed284'
 		        ]

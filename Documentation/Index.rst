@@ -29,7 +29,7 @@ Simple OpenStreetMap
 		OpenStreetMap,leaflet,fullscreen,minimap,open,street,map
 
 	:Copyright:
-		2019
+		2021
 
 	:Author:
 		Regis TEDONE

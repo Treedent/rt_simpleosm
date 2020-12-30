@@ -1,8 +1,19 @@
 <?php
 
-namespace CMSPACA\RtSimpleosm\Hooks;
+namespace SYRADEV\RtSimpleosm\Hooks;
 
-use CMSPACA\RtSimpleosm\Domain\Repository\OsmRepository;
+/***
+ *
+ * This file is part of the "Simple OpenStreetMap" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ *  (c) 2021 Regis TEDONE <regis.tedone@gmail.com>, SYRADEV
+ *
+ ***/
+
+use SYRADEV\RtSimpleosm\Domain\Repository\OsmRepository;
 use TYPO3\CMS\Backend\View\PageLayoutView;
 use TYPO3\CMS\Backend\View\PageLayoutViewDrawItemHookInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;

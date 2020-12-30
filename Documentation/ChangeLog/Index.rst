@@ -11,6 +11,12 @@
 ChangeLog
 =========
 
+2020-12-29 : Upload of version 4.1.2
+
+    - Added Compatibility for TYPO3 V10 LTS.
+    - Removed support for TYPO3 V7. Use version 2.0.1 instead.
+
+
 2019-05-16 : Upload of version 2.0.1
 
     - Bug correction : Skip rendering of the map if settings are not provided. Thanks to (YKWeyer).
