@@ -11,6 +11,10 @@
 ChangeLog
 =========
 
+2022-01-14 : Upload of version 4.1.3
+
+    - Added Compatibility for TYPO3 V11 LTS.
+
 2020-12-29 : Upload of version 4.1.2
 
     - Added Compatibility for TYPO3 V10 LTS.
