@@ -25,7 +25,6 @@
         }
     },
     "replace": {
-        "syradev/rt_simpleosm": "*",
         "typo3-ter/rt_simpleosm": "*"
     },
     "extra": {
